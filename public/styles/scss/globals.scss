@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400;700&family=Work+Sans:wght@400;500&display=swap');
+
+@font-face {
+  font-family: "Kollektif";
+  src: url("../../fonts/Kollektift.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Kollektif";
+  src: url("../../fonts/Kollektift-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+$family-primary: 'Work Sans';
+$family-secondary: 'Domine';
+$clay-blue: #8894AD;
+$light-blue: #D7E2E8;
+$mustard: #FEB617;
+$clay-gray: #96919A;
+$black: #242424;
+$periwinkle: #D4E2FF;
+$main-gray: #595959;
+$bg-gray: #F8F9FE;
+$purp: #4947C0;
+$bright-blue: #2E72FF;
+$dark-blue: #364E81;
+$white: #FFF;
+
+$body-background-color: $light-blue;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&display=swap');
