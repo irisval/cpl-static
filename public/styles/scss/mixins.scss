@@ -1,0 +1,11 @@
+@mixin card($color) {
+    &:after {
+        content: '';
+        position: absolute;
+        top: -0.6rem;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-top: 0.35rem solid $color;
+    }
+}

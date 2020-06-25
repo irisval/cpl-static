@@ -1,0 +1,77 @@
+$card-content-padding: 1.5rem;
+
+.card {
+    max-width: 90% !important;
+    margin: 0 auto;
+    color: $main-gray;
+    .card-content {
+        padding: $card-content-padding;
+        /*padding: 0.7rem 1rem 1.5rem;*/
+        .card-content__bottom {
+            margin-top: 0.7rem;
+        }
+    }
+}
+
+.link-span { 
+  position: absolute; 
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+
+@mixin card-research($m) {
+    @include card($dark-blue);
+    .card-image {
+        border-bottom: 1px solid $lightest-gray;
+    }
+    .research-tag {
+        font-weight: 700;
+        color: $dark-blue;
+    }
+    .name {
+        margin-top: $m;
+        font-size: $subtext-size;
+    }
+}
+
+.card-research--image {
+    @include card-research(0.5rem);
+}
+
+.card-research--text {
+    @include card-research(1rem);
+    min-height: $card-min;
+}
+
+
+.card-person {
+    @include card($purp);
+    display: flex;
+    padding: $card-content-padding;
+
+    .card-image {
+        width: 35%;
+    }
+
+    .card-content {
+        padding: 0 0 0 1rem;
+        width: 65%;
+        .name {
+            font-weight: 700;
+            color: $black;
+        }
+        
+        .phd-tag {
+            font-size: $subtext-size;
+            color: $purp;
+            font-weight: 500;
+            line-height: 0.8;
+        }
+    }
+}
+
+

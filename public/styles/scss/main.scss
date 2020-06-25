@@ -1,9 +1,61 @@
 @charset "utf-8";
 
 @import "globals.scss";
+@import "mixins.scss";
+@import "cards.scss";
+@import "index.scss";
 
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  font-size: 1.6rem; /* 16px */
+}
+
+
+.nav {
+  .logo {
+      max-width: 80px;
+  }
+  font-family: $kollektif;
+  color: $main-gray;
+  background-color: $white;
+  font-size: 0.8rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  .fa-angle-down {
+      color: $mustard;
+      padding-left: 5px;
+  }
+  .nav__link {
+      margin-left: 1rem;
+  }
+}
+
+.underline {
+  height: 10px;
+  background: $mustard;
+}
+
+.section-title {
+  font-family: $kollektif;
+  font-size: $section-title-size;
+  text-decoration: underline;
+  text-decoration-color: $mustard;
+}
+.divider {
+  border-top: 1px solid $light-gray;
+}
+
+
+
+/*@import "bulma-0.9.0/bulma.sass";*/
 @import "bulma-0.9.0/sass/utilities/_all.sass";
 @import "bulma-0.9.0/sass/base/_all.sass";
+@import "bulma-0.9.0/sass/components/level.sass";
 @import "bulma-0.9.0/sass/components/tabs.sass";
 @import "bulma-0.9.0/sass/components/dropdown.sass";
 @import "bulma-0.9.0/sass/components/card.sass";
