@@ -1,11 +1,31 @@
-@mixin card($color) {
-    &:after {
-        content: '';
-        position: absolute;
-        top: -0.6rem;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        border-top: 0.35rem solid $color;
+
+@mixin callout-text($color, $size) {
+    font-family: $family-secondary;
+    font-weight: bold;
+    color: $color;
+    font-size: $size;
+}
+
+@mixin underline($color) {
+  height: 10px;
+  background: $color;
+}
+
+@mixin event($title-color) {
+    .event__date {
+        font-family: $kollektif;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: $mustard;
+    }
+    .event__title {
+        font-family: $family-secondary;
+        text-decoration: underline;
+        font-weight: bold;
+        color: $title-color;
+        font-size: 1.5rem;
+    }
+    .event__description, .event__location {
+        font-weight: 400;
     }
 }

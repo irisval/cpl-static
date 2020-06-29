@@ -2,19 +2,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&display=swap");
 @font-face {
   font-family: "Kollektif";
-  src: url("../../fonts/Kollektift.ttf") format("truetype");
+  src: url("../fonts/Kollektif.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Kollektif";
-  src: url("../../fonts/Kollektift-Bold.ttf") format("truetype");
+  src: url("../fonts/Kollektif-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
 .card {
-  max-width: 90% !important;
-  margin: 0 auto;
+  /* max-width: 90%;*/
+  margin: 0 5%;
   color: #595959;
 }
 .card .card-content {
@@ -46,13 +46,16 @@
 .card-research--image .card-image {
   border-bottom: 1px solid #E5E5E5;
 }
-.card-research--image .research-tag {
+.card-research--image .research-tag, .card-research--image .research-page-name {
   font-weight: 700;
   color: #364E81;
 }
-.card-research--image .name {
+.card-research--image .home-name, .card-research--image .research-page-date {
   margin-top: 0.5rem;
   font-size: 0.75rem;
+}
+.card-research--image .date {
+  color: #364E81;
 }
 
 .card-research--text {
@@ -70,13 +73,16 @@
 .card-research--text .card-image {
   border-bottom: 1px solid #E5E5E5;
 }
-.card-research--text .research-tag {
+.card-research--text .research-tag, .card-research--text .research-page-name {
   font-weight: 700;
   color: #364E81;
 }
-.card-research--text .name {
+.card-research--text .home-name, .card-research--text .research-page-date {
   margin-top: 1rem;
   font-size: 0.75rem;
+}
+.card-research--text .date {
+  color: #364E81;
 }
 
 .card-person {
@@ -110,6 +116,54 @@
   line-height: 0.8;
 }
 
+.card-home-news {
+  display: flex !important;
+  width: 40vw !important;
+  padding: 1.5rem 1.5rem 1.5rem 0;
+  /*padding: $card-content-padding;*/
+  margin: 1rem 3rem;
+}
+.card-home-news:after {
+  content: "";
+  position: absolute;
+  top: -0.6rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-top: 0.35rem solid #595959;
+}
+.card-home-news .card-image {
+  width: 40%;
+  margin-left: -1rem;
+}
+.card-home-news .home-news-card-content {
+  margin: 0 1rem;
+  width: 60%;
+  display: flex;
+  flex-flow: column nowrap;
+}
+.card-home-news .home-news-card-content .headline {
+  font-weight: 700;
+  color: #595959;
+  font-size: 1.3rem;
+}
+.card-home-news .home-news-card-content .card-content__bottom {
+  line-height: 0px;
+  margin-top: auto;
+  padding-bottom: 10px;
+}
+.card-home-news .home-news-card-content .card-content__bottom .date, .card-home-news .home-news-card-content .card-content__bottom .more {
+  display: inline-block;
+  font-size: 0.75rem;
+}
+.card-home-news .home-news-card-content .card-content__bottom .date {
+  color: #242424;
+}
+.card-home-news .home-news-card-content .card-content__bottom .more {
+  float: right;
+  text-decoration: underline;
+}
+
 #home .hero {
   height: 100vh;
   background-color: #8894AD;
@@ -120,13 +174,10 @@
   color: #FFF;
   font-size: 3.5rem;
 }
-#home .hero .underline {
-  width: 2rem;
-}
 #home .hero .tagline-description {
   color: #FFF;
 }
-#home .hero .underline {
+#home .hero .underline--yellow {
   width: 7rem;
   margin: 0rem 0 2rem;
 }
@@ -148,10 +199,130 @@
   max-width: 90%;
 }
 #home .section-inner {
-  margin: 2rem 0 5rem;
+  padding: 2rem 0 5rem;
 }
 #home .home-upcoming {
   background: #FFF;
+}
+#home .home-upcoming .section-inner {
+  display: flex;
+  flex-direction: row;
+}
+#home .home-upcoming .section-inner .section__left {
+  width: 35%;
+}
+#home .home-upcoming .section-inner .section__left .upcoming-title {
+  font-family: "Domine";
+  font-weight: bold;
+  color: #8894AD;
+  font-size: 3rem;
+}
+#home .home-upcoming .section-inner .section__left .underline--clayblue {
+  width: 6rem;
+  margin: 0rem 0 2rem;
+}
+#home .home-upcoming .section-inner .section__left .button {
+  margin-top: 2rem;
+}
+#home .home-upcoming .section-inner .section__left .button i {
+  margin-left: 3rem;
+}
+#home .home-upcoming .section-inner .section__right {
+  width: 65%;
+}
+#home .home-upcoming .section-inner .section__right .event {
+  border-left: 1px solid #595959;
+  padding: 0 2rem;
+}
+#home .home-upcoming .section-inner .section__right .event .event__date {
+  font-family: "Kollektif";
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #FEB617;
+}
+#home .home-upcoming .section-inner .section__right .event .event__title {
+  font-family: "Domine";
+  text-decoration: underline;
+  font-weight: bold;
+  color: #595959;
+  font-size: 1.5rem;
+}
+#home .home-upcoming .section-inner .section__right .event .event__description, #home .home-upcoming .section-inner .section__right .event .event__location {
+  font-weight: 400;
+}
+#home .home-upcoming .section-inner .section__right .event .event__date {
+  margin-bottom: 0.8rem;
+}
+#home .home-upcoming .section-inner .section__right .event .event__title {
+  margin-bottom: 1.5rem;
+}
+#home .home-upcoming .section-inner .section__right .event .event__description {
+  margin-bottom: 3rem;
+}
+#home .home-getinvolved {
+  background: #FFF;
+}
+#home .home-getinvolved .section-inner {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+#home .home-getinvolved .section-inner .section__left {
+  width: 35%;
+}
+#home .home-getinvolved .section-inner .section__left .upcoming-title {
+  font-family: "Domine";
+  font-weight: bold;
+  color: #8894AD;
+  font-size: 3rem;
+}
+#home .home-getinvolved .section-inner .section__left .underline--clayblue {
+  width: 6rem;
+  margin: 0rem 0 2rem;
+}
+#home .home-getinvolved .section-inner .section__left .button {
+  margin-top: 2rem;
+}
+#home .home-getinvolved .section-inner .section__left .button i {
+  margin-left: 3rem;
+}
+#home .home-getinvolved .section-inner .section__right {
+  width: 65%;
+}
+#home .home-getinvolved .section-inner .section__right {
+  padding: 0 3rem;
+}
+#home .home-getinvolved .section-inner .section__right .text {
+  vertical-align: middle;
+  line-height: 1.8;
+}
+#home .home-getinvolved .section-inner .section__right .text a {
+  text-decoration: underline;
+}
+#home .text-more {
+  float: right;
+  font-weight: bold;
+  color: #8894AD;
+  text-decoration: none;
+}
+#home .text-more i {
+  margin-left: 0.5rem;
+}
+#home .home-news .carousel-control {
+  display: flex;
+  align-items: center;
+  /*Vertical align*/
+  justify-content: center;
+  margin-top: 2rem;
+}
+#home .home-news .carousel-control button {
+  background: none;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  margin: 0 2.5rem;
+}
+#home .home-news .carousel-control i {
+  color: #8894AD;
 }
 
 html {
@@ -173,7 +344,7 @@ body {
   font-weight: bold;
 }
 .nav .logo {
-  max-width: 80px;
+  max-width: 100px;
 }
 .nav .fa-angle-down {
   color: #FEB617;
@@ -183,9 +354,75 @@ body {
   margin-left: 1rem;
 }
 
-.underline {
+.footer {
+  background: #8894AD;
+  color: #F8F9FE;
+}
+.footer a {
+  color: #F8F9FE;
+}
+.footer .footer-cornell {
+  padding-top: 1.5rem;
+  display: flex;
+}
+.footer .footer-cornell .logo {
+  max-width: 80px;
+}
+.footer .footer-cornell .footer-cornell-name {
+  margin-left: 2rem;
+}
+.footer .footer-cornell .footer-cornell-name .lab-name {
+  font-family: "Domine";
+  font-weight: bold;
+  color: #F8F9FE;
+  font-size: 1.2rem;
+}
+.footer .contact-info i, .footer .contact-info p {
+  display: inline-block;
+}
+.footer .category, .footer .contact-info i {
+  color: #D7E2E8;
+}
+.footer .contact-info {
+  margin: 1rem 0;
+}
+.footer .category {
+  font-weight: 700;
+}
+.footer .tricol {
+  align-items: flex-start;
+  margin: 3.5rem 0rem 1rem;
+}
+.footer .tricol:nth-of-type(2) {
+  border-left: 1px solid #D7E2E8;
+  border-right: 1px solid #D7E2E8;
+}
+.footer .tricol:nth-of-type(2), .footer .tricol:nth-of-type(3) {
+  padding-left: 2rem;
+}
+.footer .links-col {
+  display: flex;
+  flex-direction: column;
+}
+.footer .links-col a {
+  margin: 0.5rem 0;
+}
+.footer .email {
+  text-decoration: underline;
+}
+.footer .copyright {
+  color: #D7E2E8;
+  padding-bottom: 1.1rem;
+}
+
+.underline--yellow {
   height: 10px;
   background: #FEB617;
+}
+
+.underline--clayblue {
+  height: 10px;
+  background: #8894AD;
 }
 
 .section-title {
@@ -197,6 +434,11 @@ body {
 
 .divider {
   border-top: 1px solid #C4C4C4;
+}
+
+.button {
+  border-radius: 1px !important;
+  font-weight: 700;
 }
 
 /*@import "bulma-0.9.0/bulma.sass";*/
@@ -403,7 +645,7 @@ pre {
 }
 
 body {
-  color: #4a4a4a;
+  color: #595959;
   font-size: 1em;
   font-weight: 400;
   line-height: 1.5;
@@ -887,9 +1129,9 @@ a.box:active {
 
 .button {
   background-color: #FFF;
-  border-color: #dbdbdb;
+  border-color: #8894AD;
   border-width: 1px;
-  color: #363636;
+  color: #8894AD;
   cursor: pointer;
   justify-content: center;
   padding-bottom: calc(0.5em - 1px);

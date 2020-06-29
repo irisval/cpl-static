@@ -2,14 +2,14 @@
 
 @font-face {
   font-family: "Kollektif";
-  src: url("../../fonts/Kollektift.ttf") format("truetype");
+  src: url("../fonts/Kollektif.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Kollektif";
-  src: url("../../fonts/Kollektift-Bold.ttf") format("truetype");
+  src: url("../fonts/Kollektif-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
@@ -39,9 +39,12 @@ $subtext-size: 0.75rem;
 $card-min: 12em;
 
 $body-background-color: $bg-gray;
+$body-color: $main-gray;
 $link: $main-gray;
 $hero-body-padding-large: 7rem 1.5rem;
 $card-shadow: 0 3px 27px $lightest-gray;
 $section-title-size: 1.5rem;
+$button-border-color: $clay-blue;
+$button-color: $clay-blue;
 
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&display=swap');

@@ -1,8 +1,20 @@
 $card-content-padding: 1.5rem;
 
+@mixin card($color) {
+    &:after {
+        content: '';
+        position: absolute;
+        top: -0.6rem;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-top: 0.35rem solid $color;
+    }
+}
+
 .card {
-    max-width: 90% !important;
-    margin: 0 auto;
+   /* max-width: 90%;*/
+    margin: 0 5%;
     color: $main-gray;
     .card-content {
         padding: $card-content-padding;
@@ -28,13 +40,16 @@ $card-content-padding: 1.5rem;
     .card-image {
         border-bottom: 1px solid $lightest-gray;
     }
-    .research-tag {
+    .research-tag, .research-page-name {
         font-weight: 700;
         color: $dark-blue;
     }
-    .name {
+    .home-name, .research-page-date {
         margin-top: $m;
         font-size: $subtext-size;
+    }
+    .date {
+        color: $dark-blue;
     }
 }
 
@@ -74,4 +89,46 @@ $card-content-padding: 1.5rem;
     }
 }
 
+
+.card-home-news {
+    @include card($main-gray);
+    display: flex !important;
+    width: 40vw !important;
+    padding: $card-content-padding $card-content-padding $card-content-padding 0;
+    /*padding: $card-content-padding;*/
+    margin: 1rem 3rem;
+
+    .card-image {
+        width: 40%;
+        margin-left: -1rem;
+    }
+    .home-news-card-content {
+        margin: 0 1rem;
+        width: 60%;
+        display: flex;
+        flex-flow: column nowrap;
+        .headline {
+            font-weight: 700;
+            color: $main-gray;
+            font-size: 1.3rem;
+        }
+        
+        .card-content__bottom {
+            line-height: 0px;
+            margin-top: auto;
+            padding-bottom: 10px;
+            .date, .more {
+                display: inline-block;
+                font-size: $subtext-size;
+            }
+            .date {
+                color: $black;
+            }
+            .more {
+                float: right;
+                text-decoration: underline;
+            }
+        }
+    }
+}
 

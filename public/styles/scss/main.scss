@@ -4,7 +4,7 @@
 @import "mixins.scss";
 @import "cards.scss";
 @import "index.scss";
-
+@import "research.scss";
 
 html {
   font-size: 62.5%;
@@ -18,7 +18,7 @@ body {
 
 .nav {
   .logo {
-      max-width: 80px;
+    max-width: 100px;
   }
   font-family: $kollektif;
   color: $main-gray;
@@ -27,18 +27,80 @@ body {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   font-weight: bold;
   .fa-angle-down {
-      color: $mustard;
-      padding-left: 5px;
+    color: $mustard;
+    padding-left: 5px;
   }
   .nav__link {
-      margin-left: 1rem;
+    margin-left: 1rem;
   }
 }
 
-.underline {
-  height: 10px;
-  background: $mustard;
+.footer {
+  background: $clay-blue;
+  color: $bg-gray;
+  a {
+    color: $bg-gray;
+  }
+  .footer-cornell {
+    padding-top: 1.5rem;
+    display: flex;
+    .logo {
+      max-width: 80px;
+    }
+    .footer-cornell-name {
+      margin-left: 2rem;
+      .lab-name {
+        @include callout-text($bg-gray, 1.2rem);
+      }
+    }
+  }
+  .contact-info i, .contact-info p {
+    display: inline-block;
+  }
+  .category, .contact-info i {
+    color: $light-blue;
+  }
+  .contact-info {
+    margin: 1rem 0;
+  }
+  .category {
+    font-weight: 700;
+  }
+  .tricol {
+    align-items: flex-start;
+    margin: 3.5rem 0rem 1rem;
+    &:nth-of-type(2) {
+      border-left: 1px solid $light-blue;
+      border-right: 1px solid $light-blue;
+    } 
+    &:nth-of-type(2), &:nth-of-type(3) {
+      padding-left: 2rem;
+    } 
+  }
+  .links-col {
+    display: flex;
+    flex-direction: column;
+    a {
+      margin: 0.5rem 0;
+    }
+  }
+  .email {
+    text-decoration: underline;
+  }
+  .copyright {
+    color: $light-blue;
+    padding-bottom: 1.1rem;
+  }
 }
+
+.underline--yellow {
+  @include underline($mustard);
+}
+
+.underline--clayblue {
+  @include underline($clay-blue);
+}
+
 
 .section-title {
   font-family: $kollektif;
@@ -46,10 +108,15 @@ body {
   text-decoration: underline;
   text-decoration-color: $mustard;
 }
+
 .divider {
   border-top: 1px solid $light-gray;
 }
 
+.button {
+  border-radius: 1px !important;
+  font-weight: 700;
+}
 
 
 /*@import "bulma-0.9.0/bulma.sass";*/
