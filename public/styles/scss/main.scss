@@ -102,7 +102,6 @@ body {
   @include underline($clay-blue);
 }
 
-
 .section-title {
   font-family: $kollektif;
   font-size: $section-title-size;
@@ -114,9 +113,52 @@ body {
   border-top: 1px solid $light-gray;
 }
 
-.button {
+button {
   border-radius: 1px !important;
   font-weight: 700;
+}
+
+.clear-button {
+  background: none !important;
+  padding-left: 2.5rem !important;
+  padding-right: 2.5rem !important;
+}
+
+.cutoff-hero {
+    background: linear-gradient(180deg, $clay-blue 50%, $bg-gray 50%);
+/*        background: $clay-blue;*/
+    .hero-content {
+        padding: 2rem 1.5rem;
+        .hero__inner {
+            display: flex;
+            justify-content: space-between;
+            .hero__left {
+                padding-top: 3rem;
+                margin: auto 0;
+                .page-title-block {
+                    background: $bg-gray;
+                    display: inline-block;
+                    .page-title {
+                        @include callout-text($clay-blue, 2.5rem);
+                      /*  display: inline-block;
+                        width: 100%;*/
+                    }
+                    .underline--yellow {
+                        width: 100%;
+                        margin: 0 0 1rem;
+                    }
+                }
+                
+                .page-tag {
+                    color: $main-gray;
+                }
+            }
+            .hero__right {
+                max-width: 40%;
+            }
+        }
+        
+    }  
 }
 
 

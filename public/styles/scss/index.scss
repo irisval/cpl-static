@@ -115,13 +115,10 @@
     .home-news {
         .carousel-control {
             display: flex;
-            align-items:center;/*Vertical align*/
-            justify-content:center;
+            align-items: center;/*Vertical align*/
+            justify-content: center;
             margin-top: 2rem;
-            button {
-                background: none;
-                padding-left: 2.5rem;
-                padding-right: 2.5rem;
+            .clear-button {
                 margin: 0 2.5rem;
             }
             i {

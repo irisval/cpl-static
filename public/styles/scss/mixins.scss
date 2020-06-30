@@ -29,3 +29,28 @@
         font-weight: 400;
     }
 }
+
+@mixin dropdown($width) {
+    .dropdown-trigger button {
+        background: none;
+        color: $main-gray;
+        font-weight: 400;
+        border-width: 0 0 1px 0;
+        border-style: solid;
+        border-color: $bg-gray $bg-gray $clay-blue $bg-gray;
+        width: $width;
+        justify-content: left;
+        display: inline-block;
+        padding-left: 0.1rem;
+        padding-right: 0.1rem;
+        span:first-of-type {
+            float: left;
+        }
+        span.icon {
+            float: right;
+        }
+    }
+    .dropdown-content {
+        width: $width;
+    }
+}

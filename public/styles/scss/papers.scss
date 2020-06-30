@@ -1,0 +1,22 @@
+#papers-page {
+    .papers-all {
+        .columns {
+            margin: 2.5rem 0;
+            &:last-of-type {
+                margin-bottom: $page-bottom;
+            }
+        }
+        .dropdown-year {
+            @include dropdown(12rem);
+            margin-right: 2em;
+        }
+
+        .dropdown-author {
+            @include dropdown(20rem);
+        }
+        
+        .clear-button {
+            margin: 0 auto;
+        }
+    }
+}

@@ -1,4 +1,7 @@
 $card-content-padding: 1.5rem;
+$card-home-min: 12rem;
+$card-research-min: 22rem;
+$card-paper-min: 13rem;
 
 @mixin card($color) {
     &:after {
@@ -68,7 +71,27 @@ $card-content-padding: 1.5rem;
 
 .card-research--text {
     @include card-research(1rem);
-    min-height: $card-min;
+    min-height: $card-research-min;
+}
+
+.card-paper {
+    @include card($clay-gray);
+    min-height: $card-paper-min;
+
+    .year {
+        font-weight: 700;
+        color: $clay-gray;
+    }
+    .authors {
+        color: $clay-gray;
+        position: absolute;
+        bottom: 1.5rem;
+        width: 100%;
+        .author {
+            display: inline-block;
+            margin-right: 0.5rem;
+        }
+    }
 }
 
 
