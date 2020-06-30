@@ -48,9 +48,18 @@ $card-content-padding: 1.5rem;
         margin-top: $m;
         font-size: $subtext-size;
     }
-    .date {
+    .research-page-date {
         color: $dark-blue;
     }
+}
+
+.card-home-research--image {
+    @include card-research(0.5rem);
+}
+
+.card-home-research--text {
+    @include card-research(1rem);
+    min-height: $card-home-min;
 }
 
 .card-research--image {

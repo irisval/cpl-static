@@ -2,14 +2,14 @@
 
 @font-face {
   font-family: "Kollektif";
-  src: url("../fonts/Kollektif.ttf") format("truetype");
+  src: url("../fonts/kollektif/Kollektif.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Kollektif";
-  src: url("../fonts/Kollektif-Bold.ttf") format("truetype");
+  src: url("../fonts/kollektif/Kollektif-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
@@ -36,7 +36,8 @@ $white: #FFF;
 
 
 $subtext-size: 0.75rem;
-$card-min: 12em;
+$card-home-min: 12rem;
+$card-min: 22rem;
 
 $body-background-color: $bg-gray;
 $body-color: $main-gray;
@@ -46,5 +47,6 @@ $card-shadow: 0 3px 27px $lightest-gray;
 $section-title-size: 1.5rem;
 $button-border-color: $clay-blue;
 $button-color: $clay-blue;
+$page-bottom: 6rem;
 
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&display=swap');
