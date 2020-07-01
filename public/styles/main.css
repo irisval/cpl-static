@@ -163,11 +163,11 @@
   margin-right: 0.5rem;
 }
 
-.card-person {
+.card-home-person {
   display: flex;
   padding: 1.5rem;
 }
-.card-person:after {
+.card-home-person:after {
   content: "";
   position: absolute;
   top: -0.6rem;
@@ -176,22 +176,136 @@
   bottom: 0;
   border-top: 0.35rem solid #4947C0;
 }
-.card-person .card-image {
+.card-home-person .card-image {
   width: 35%;
 }
-.card-person .card-content {
+.card-home-person .card-content {
   padding: 0 0 0 1rem;
   width: 65%;
 }
-.card-person .card-content .name {
+.card-home-person .card-content .name {
   font-weight: 700;
   color: #242424;
 }
-.card-person .card-content .phd-tag {
+.card-home-person .card-content .phd-tag {
   font-size: 0.75rem;
   color: #4947C0;
   font-weight: 500;
   line-height: 0.8;
+}
+
+.card-student {
+  display: flex;
+  padding: 1.5rem;
+}
+.card-student:after {
+  content: "";
+  position: absolute;
+  top: -0.6rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-top: 0.35rem solid #4947C0;
+}
+.card-student .card-image {
+  width: 35%;
+}
+.card-student .card-content {
+  padding: 0 0 0 1.5rem;
+  width: 65%;
+}
+.card-student .card-content .name {
+  font-weight: 700;
+  color: #242424;
+}
+.card-student .card-content .tag {
+  font-size: 0.75rem;
+  color: #4947C0;
+  font-weight: 500;
+  line-height: 0.8;
+}
+.card-student .card-content .card-content__bottom {
+  margin-top: 1.3rem;
+  line-height: 1.75;
+}
+.card-student .card-content .card-content__bottom .email {
+  text-decoration: underline;
+}
+
+.card-faculty {
+  display: flex;
+  padding: 1.5rem;
+}
+.card-faculty:after {
+  content: "";
+  position: absolute;
+  top: -0.6rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-top: 0.35rem solid #2E72FF;
+}
+.card-faculty .card-image {
+  width: 35%;
+}
+.card-faculty .card-content {
+  padding: 0 0 0 1.5rem;
+  width: 65%;
+}
+.card-faculty .card-content .name {
+  font-weight: 700;
+  color: #242424;
+}
+.card-faculty .card-content .tag {
+  font-size: 0.75rem;
+  color: #2E72FF;
+  font-weight: 500;
+  line-height: 0.8;
+}
+.card-faculty .card-content .card-content__bottom {
+  margin-top: 1.3rem;
+  line-height: 1.75;
+}
+.card-faculty .card-content .card-content__bottom .email {
+  text-decoration: underline;
+}
+
+.card-alum {
+  display: flex;
+  padding: 1.5rem;
+}
+.card-alum:after {
+  content: "";
+  position: absolute;
+  top: -0.6rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-top: 0.35rem solid #364E81;
+}
+.card-alum .card-image {
+  width: 35%;
+}
+.card-alum .card-content {
+  padding: 0 0 0 1.5rem;
+  width: 65%;
+}
+.card-alum .card-content .name {
+  font-weight: 700;
+  color: #242424;
+}
+.card-alum .card-content .tag {
+  font-size: 0.75rem;
+  color: #364E81;
+  font-weight: 500;
+  line-height: 0.8;
+}
+.card-alum .card-content .card-content__bottom {
+  margin-top: 1.3rem;
+  line-height: 1.75;
+}
+.card-alum .card-content .card-content__bottom .email {
+  text-decoration: underline;
 }
 
 .card-home-news {
@@ -400,6 +514,9 @@
   color: #8894AD;
 }
 
+#research-page .research-all .section-inner {
+  padding: 1rem 0;
+}
 #research-page .research-all .columns {
   margin: 2.5rem 0;
 }
@@ -429,6 +546,9 @@
   width: 15rem;
 }
 
+#papers-page .papers-all .section-inner {
+  padding: 1rem 0;
+}
 #papers-page .papers-all .columns {
   margin: 2.5rem 0;
 }
@@ -484,6 +604,16 @@
 }
 #papers-page .papers-all .clear-button {
   margin: 0 auto;
+}
+
+#whoweare-page .whoweare-all .section-inner {
+  padding: 1rem 0;
+}
+#whoweare-page .whoweare-all .columns {
+  margin: 2.5rem 0;
+}
+#whoweare-page .whoweare-all .columns:last-of-type {
+  margin-bottom: 6rem;
 }
 
 html {
@@ -1052,30 +1182,30 @@ table th {
   align-items: center;
   border-bottom-color: #dbdbdb;
   border-bottom-style: solid;
-  border-bottom-width: 1px;
+  border-bottom-width: 2px;
   color: #4a4a4a;
   display: flex;
   justify-content: center;
-  margin-bottom: -1px;
+  margin-bottom: -2px;
   padding: 0.5em 1em;
   vertical-align: top;
 }
 .tabs a:hover {
   border-bottom-color: #363636;
-  color: #363636;
+  color: #8894AD;
 }
 .tabs li {
   display: block;
 }
 .tabs li.is-active a {
-  border-bottom-color: #595959;
+  border-bottom-color: #8894AD;
   color: #595959;
 }
 .tabs ul {
   align-items: center;
   border-bottom-color: #dbdbdb;
   border-bottom-style: solid;
-  border-bottom-width: 1px;
+  border-bottom-width: 2px;
   display: flex;
   flex-grow: 1;
   flex-shrink: 0;

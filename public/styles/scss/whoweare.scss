@@ -1,5 +1,5 @@
-#research-page {
-    .research-all {
+#whoweare-page {
+    .whoweare-all {
         .section-inner {
             padding: 1rem 0;
         }
@@ -9,8 +9,6 @@
                 margin-bottom: $page-bottom;
             }
         }
-        .dropdown {
-            @include dropdown(15rem);
-        }
+       
     }
 }

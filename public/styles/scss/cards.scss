@@ -95,7 +95,7 @@ $card-paper-min: 13rem;
 }
 
 
-.card-person {
+.card-home-person {
     @include card($purp);
     display: flex;
     padding: $card-content-padding;
@@ -121,6 +121,49 @@ $card-paper-min: 13rem;
     }
 }
 
+@mixin card-person($color) {
+    @include card($color);
+    display: flex;
+    padding: $card-content-padding;
+
+    .card-image {
+        width: 35%;
+    }
+
+    .card-content {
+        padding: 0 0 0 1.5rem;
+        width: 65%;
+        .name {
+            font-weight: 700;
+            color: $black;
+        }
+        
+        .tag {
+            font-size: $subtext-size;
+            color: $color;
+            font-weight: 500;
+            line-height: 0.8;
+        }
+
+        .card-content__bottom {
+            margin-top: 1.3rem;
+            line-height: 1.75;
+            .email {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.card-student {
+    @include card-person($purp);
+}
+.card-faculty {
+    @include card-person($bright-blue);
+}
+.card-alum {
+    @include card-person($dark-blue);
+}
 
 .card-home-news {
     @include card($main-gray);
