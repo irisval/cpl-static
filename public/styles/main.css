@@ -186,6 +186,7 @@
 .card-home-person .card-content .name {
   font-weight: 700;
   color: #242424;
+  font-size: 1.2rem;
 }
 .card-home-person .card-content .phd-tag {
   font-size: 0.75rem;
@@ -193,10 +194,13 @@
   font-weight: 500;
   line-height: 0.8;
 }
+.card-home-person .card-content .card-content__bottom {
+  font-size: 0.9rem;
+}
 
 .card-student {
   display: flex;
-  padding: 1.5rem;
+  padding: 1.5rem 1rem;
 }
 .card-student:after {
   content: "";
@@ -217,16 +221,21 @@
 .card-student .card-content .name {
   font-weight: 700;
   color: #242424;
+  text-decoration: underline;
+  text-decoration-color: #8894AD;
+  margin-bottom: 2px;
+  font-size: 1.2rem;
 }
 .card-student .card-content .tag {
   font-size: 0.75rem;
   color: #4947C0;
   font-weight: 500;
-  line-height: 0.8;
+  line-height: 1.4;
 }
 .card-student .card-content .card-content__bottom {
-  margin-top: 1.3rem;
+  /*  margin-top: 1.3rem;*/
   line-height: 1.75;
+  font-size: 0.9rem;
 }
 .card-student .card-content .card-content__bottom .email {
   text-decoration: underline;
@@ -234,7 +243,7 @@
 
 .card-faculty {
   display: flex;
-  padding: 1.5rem;
+  padding: 1.5rem 1rem;
 }
 .card-faculty:after {
   content: "";
@@ -255,16 +264,21 @@
 .card-faculty .card-content .name {
   font-weight: 700;
   color: #242424;
+  text-decoration: underline;
+  text-decoration-color: #8894AD;
+  margin-bottom: 2px;
+  font-size: 1.2rem;
 }
 .card-faculty .card-content .tag {
   font-size: 0.75rem;
   color: #2E72FF;
   font-weight: 500;
-  line-height: 0.8;
+  line-height: 1.4;
 }
 .card-faculty .card-content .card-content__bottom {
-  margin-top: 1.3rem;
+  /*  margin-top: 1.3rem;*/
   line-height: 1.75;
+  font-size: 0.9rem;
 }
 .card-faculty .card-content .card-content__bottom .email {
   text-decoration: underline;
@@ -272,7 +286,7 @@
 
 .card-alum {
   display: flex;
-  padding: 1.5rem;
+  padding: 1.5rem 1rem;
 }
 .card-alum:after {
   content: "";
@@ -293,16 +307,21 @@
 .card-alum .card-content .name {
   font-weight: 700;
   color: #242424;
+  text-decoration: underline;
+  text-decoration-color: #8894AD;
+  margin-bottom: 2px;
+  font-size: 1.2rem;
 }
 .card-alum .card-content .tag {
   font-size: 0.75rem;
   color: #364E81;
   font-weight: 500;
-  line-height: 0.8;
+  line-height: 1.4;
 }
 .card-alum .card-content .card-content__bottom {
-  margin-top: 1.3rem;
+  /*  margin-top: 1.3rem;*/
   line-height: 1.75;
+  font-size: 0.9rem;
 }
 .card-alum .card-content .card-content__bottom .email {
   text-decoration: underline;
@@ -725,6 +744,10 @@ body {
 
 .divider {
   border-top: 1px solid #C4C4C4;
+}
+
+.tabs a:hover, .tabs li.is-active a {
+  border-bottom-width: 2.5px;
 }
 
 button {
@@ -1180,18 +1203,18 @@ table th {
 }
 .tabs a {
   align-items: center;
-  border-bottom-color: #dbdbdb;
+  border-bottom-color: #C4C4C4;
   border-bottom-style: solid;
-  border-bottom-width: 2px;
-  color: #4a4a4a;
+  border-bottom-width: 1px;
+  color: #96919A;
   display: flex;
   justify-content: center;
-  margin-bottom: -2px;
+  margin-bottom: -1px;
   padding: 0.5em 1em;
   vertical-align: top;
 }
 .tabs a:hover {
-  border-bottom-color: #363636;
+  border-bottom-color: #8894AD;
   color: #8894AD;
 }
 .tabs li {
@@ -1199,13 +1222,13 @@ table th {
 }
 .tabs li.is-active a {
   border-bottom-color: #8894AD;
-  color: #595959;
+  color: #8894AD;
 }
 .tabs ul {
   align-items: center;
-  border-bottom-color: #dbdbdb;
+  border-bottom-color: #C4C4C4;
   border-bottom-style: solid;
-  border-bottom-width: 2px;
+  border-bottom-width: 1px;
   display: flex;
   flex-grow: 1;
   flex-shrink: 0;

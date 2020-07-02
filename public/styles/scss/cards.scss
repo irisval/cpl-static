@@ -110,6 +110,7 @@ $card-paper-min: 13rem;
         .name {
             font-weight: 700;
             color: $black;
+            font-size: 1.2rem;
         }
         
         .phd-tag {
@@ -118,13 +119,17 @@ $card-paper-min: 13rem;
             font-weight: 500;
             line-height: 0.8;
         }
+
+        .card-content__bottom {
+            font-size: 0.9rem;
+        }
     }
 }
 
 @mixin card-person($color) {
     @include card($color);
     display: flex;
-    padding: $card-content-padding;
+    padding: $card-content-padding 1rem;
 
     .card-image {
         width: 35%;
@@ -136,18 +141,23 @@ $card-paper-min: 13rem;
         .name {
             font-weight: 700;
             color: $black;
+            text-decoration: underline;
+            text-decoration-color: $clay-blue;
+            margin-bottom: 2px;
+            font-size: 1.2rem;
         }
         
         .tag {
             font-size: $subtext-size;
             color: $color;
             font-weight: 500;
-            line-height: 0.8;
+            line-height: 1.4;
         }
 
         .card-content__bottom {
-            margin-top: 1.3rem;
+          /*  margin-top: 1.3rem;*/
             line-height: 1.75;
+            font-size: 0.9rem;
             .email {
                 text-decoration: underline;
             }

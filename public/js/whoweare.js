@@ -178,12 +178,12 @@ $('.whoweare-alumni').on('click', function() {
   $('.whoweare-all .section-inner').empty();
   let whowearebody = '';
   let added = 0;
-  for (let person of people) {
+  for (let person of people) {2
     if (person.type === 'alum') {
       if (added % 3 == 0) {
         whowearebody += '<div class="columns">';
       }
-      whowearebody += '<div class="column is-one-third-desktop is-one-third-tablet"><div class="card card-faculty"><a href="#"><span class="link-span"></span></a><div class="card-image"><figure class="image is-square"><img src="'
+      whowearebody += '<div class="column is-one-third-desktop is-one-third-tablet"><div class="card card-alum"><a href="#"><span class="link-span"></span></a><div class="card-image"><figure class="image is-square"><img src="'
       whowearebody += person.image;
       whowearebody += '" alt=""></figure></div><div class="card-content"><p class="name">'
       whowearebody += person.name;

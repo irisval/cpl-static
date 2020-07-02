@@ -113,6 +113,11 @@ body {
 .divider {
   border-top: 1px solid $light-gray;
 }
+.tabs a:hover, .tabs li.is-active a {
+  border-bottom-width: 2.5px;
+}
+
+
 
 button {
   border-radius: 1px !important;
