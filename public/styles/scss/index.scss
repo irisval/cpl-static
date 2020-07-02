@@ -1,35 +1,38 @@
-#home-page {
-    .hero {
-        height: 100vh;
-        background-color: $clay-blue;
-        .tagline {
-           @include callout-text($white, 3.5rem);
-        }
-    
-        .tagline-description {
+    #home-page {
+        .hero {
+            /*height: calc(100vh - $nav-height); using variable doesn't work*/
+            height: calc(100vh - 3.2rem);
+            background-color: $clay-blue;
+            .tagline {
+               @include callout-text($white, 3.5rem);
+           }
+
+           .tagline-description {
             color: $white;
         }
         .underline--yellow {
             width: 7rem;
             margin: 0rem 0 2rem;
         }
+        .container {
+            height: 100%;
+        }
         .hero__inner {
+            height: 100%;
             display: flex;
-            flex-direction: row;
-            margin-bottom: 5rem;
             .hero__left {
                 width: percentage(2/3);
-                margin-top: 10rem;
+                margin-top: auto;
                 padding-right: 5rem;
+                padding-bottom: 4.5rem;
             }
             .hero__right {
+                display: flex;
+                margin: auto 0;
                 width: percentage(1/3);
             }
-            .hero-img {
-                margin: 0 auto;
-                max-width: 90%;
-            }
         } 
+
     }
 
     .section-inner {
@@ -123,7 +126,7 @@
             }
             i {
                 color: $clay-blue;
-              
+
             }
         }
     }

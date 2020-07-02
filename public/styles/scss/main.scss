@@ -7,6 +7,7 @@
 @import "research.scss";
 @import "papers.scss";
 @import "whoweare.scss";
+@import "research_single.scss";
 
 html {
   font-size: 62.5%;
@@ -20,21 +21,31 @@ body {
 
 .nav {
   .logo {
-    max-width: 100px;
+    max-width: 90px;
   }
-  font-family: $kollektif;
-  color: $main-gray;
-  background-color: $white;
-  font-size: 0.8rem;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  font-weight: bold;
-  .fa-angle-down {
-    color: $mustard;
-    padding-left: 5px;
+  height: $nav-height;
+  top: 0;
+  .nav-inner {
+    position: fixed;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    z-index: 1000;
+    font-family: $kollektif;
+    color: $main-gray;
+    background-color: $white;  
+    font-size: 0.8rem;
+    font-weight: bold;
+    .fa-angle-down {
+      color: $mustard;
+      padding-left: 5px;
+    }
+    .nav__link {
+      margin-left: 1rem;
+    }
   }
-  .nav__link {
-    margin-left: 1rem;
-  }
+ 
+
+
 }
 
 .footer {

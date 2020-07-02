@@ -376,7 +376,8 @@
 }
 
 #home-page .hero {
-  height: 100vh;
+  /*height: calc(100vh - $nav-height); using variable doesn't work*/
+  height: calc(100vh - 3.2rem);
   background-color: #8894AD;
 }
 #home-page .hero .tagline {
@@ -392,22 +393,23 @@
   width: 7rem;
   margin: 0rem 0 2rem;
 }
+#home-page .hero .container {
+  height: 100%;
+}
 #home-page .hero .hero__inner {
+  height: 100%;
   display: flex;
-  flex-direction: row;
-  margin-bottom: 5rem;
 }
 #home-page .hero .hero__inner .hero__left {
   width: 66.6666666667%;
-  margin-top: 10rem;
+  margin-top: auto;
   padding-right: 5rem;
+  padding-bottom: 4.5rem;
 }
 #home-page .hero .hero__inner .hero__right {
+  display: flex;
+  margin: auto 0;
   width: 33.3333333333%;
-}
-#home-page .hero .hero__inner .hero-img {
-  margin: 0 auto;
-  max-width: 90%;
 }
 #home-page .section-inner {
   padding: 2rem 0 5rem;
@@ -635,6 +637,36 @@
   margin-bottom: 6rem;
 }
 
+#researchsingle-page {
+  background: #8894AD;
+}
+#researchsingle-page .hero-content {
+  padding: 2rem 1.5rem;
+}
+#researchsingle-page .hero-content .hero__inner {
+  display: flex;
+  justify-content: space-between;
+}
+#researchsingle-page .hero-content .hero__inner .hero__left {
+  padding-top: 3rem;
+  margin: auto 0;
+}
+#researchsingle-page .hero-content .hero__inner .hero__left .page-title {
+  font-family: "Work Sans";
+  color: #8894AD;
+  font-size: 2rem;
+}
+#researchsingle-page .hero-content .hero__inner .hero__left .underline--yellow {
+  width: 100%;
+  margin: 0 0 1rem;
+}
+#researchsingle-page .hero-content .hero__inner .hero__left .page-tag {
+  color: #595959;
+}
+#researchsingle-page .hero-content .hero__inner .hero__right {
+  max-width: 40%;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -646,21 +678,28 @@ body {
 }
 
 .nav {
+  height: 3.2rem;
+  top: 0;
+}
+.nav .logo {
+  max-width: 90px;
+}
+.nav .nav-inner {
+  position: fixed;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  z-index: 1000;
   font-family: "Kollektif";
   color: #595959;
   background-color: #FFF;
   font-size: 0.8rem;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   font-weight: bold;
 }
-.nav .logo {
-  max-width: 100px;
-}
-.nav .fa-angle-down {
+.nav .nav-inner .fa-angle-down {
   color: #FEB617;
   padding-left: 5px;
 }
-.nav .nav__link {
+.nav .nav-inner .nav__link {
   margin-left: 1rem;
 }
 

@@ -10,50 +10,54 @@
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"/>
 </head>
 <body>
-  <div id="home-page">
-    <section class="hero is-large">
-      <div class="hero-head nav">
+
+<div class="nav">
+    <div class="nav-inner">
         <div class="container">
-          <nav class="level">
-            <!-- Left side -->
-            <div class="level-left">
-              <div class="level-item">
-                <figure class="logo image is-3x2">
-                  <img alt="logo" src="../public/img/logo.jpg">
-                </figure>
-              </div>
-              <div class="level-item">
-                <p class="nav__name">Cornell Phonetics Laboratory</p>
-              </div>
+      <div class="level">
+        <!-- Left side -->
+        <div class="level-left">
+          <div class="level-item">
+            <figure class="logo image is-3x2">
+              <img alt="logo" src="../public/img/logo.jpg">
+            </figure>
+          </div>
+          <div class="level-item">
+            <p class="nav__name">Cornell Phonetics Laboratory</p>
+          </div>
+        </div>
+        <!-- Right side -->
+        <div class="level-right">
+          <a class="level-item nav__link" href="index.html">Home</a>
+          <div class="dropdown is-hoverable">
+            <div class="dropdown-trigger">
+              <a class="level-item nav__link" href="about.html">About  <span class="icon is-small">
+                <i class="fas fa-angle-down" aria-hidden="true"></i>
+              </span></a>
             </div>
-            <!-- Right side -->
-            <div class="level-right">
-              <a class="level-item nav__link" href="index.html">Home</a>
-              <div class="dropdown is-hoverable">
-                <div class="dropdown-trigger">
-                  <a class="level-item nav__link" href="about.html">About  <span class="icon is-small">
-                    <i class="fas fa-angle-down" aria-hidden="true"></i>
-                  </span></a>
+            <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+              <div class="dropdown-content">
+                <div class="dropdown-item">
+                  <a class="level-item nav__link--dropdown" href="getinvolved.html">Get Involved</a>
                 </div>
-                <div class="dropdown-menu" id="dropdown-menu4" role="menu">
-                  <div class="dropdown-content">
-                    <div class="dropdown-item">
-                      <a class="level-item nav__link--dropdown" href="getinvolved.html">Get Involved</a>
-                    </div>
-                    <div class="dropdown-item">
-                      <a class="level-item nav__link--dropdown" href="whoweare.html">Who We Are</a>
-                    </div>
-                  </div>
+                <div class="dropdown-item">
+                  <a class="level-item nav__link--dropdown" href="whoweare.html">Who We Are</a>
                 </div>
               </div>
-              <a class="level-item nav__link" href="research.html">Research</a>
-              <a class="level-item nav__link" href="papers.html">Papers</a>
-              <a class="level-item nav__link" href="news.html">News</a>
             </div>
-          </nav>
+          </div>
+          <a class="level-item nav__link" href="research.html">Research</a>
+          <a class="level-item nav__link" href="papers.html">Papers</a>
+          <a class="level-item nav__link" href="news.html">News</a>
         </div>
       </div>
-      <div class="hero-content">
+    </div>
+    </div>
+  </div>
+
+      
+  <div id="home-page">
+    <section class="hero is-large">
         <div class="container">
           <div class="hero__inner">
             <div class="hero__left">
@@ -71,7 +75,7 @@
               </figure>
             </div>
           </div>
-        </div>
+
       </div>
     </section>
     <div class="home-body">
