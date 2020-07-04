@@ -45,33 +45,33 @@
         }
         .research-single-alt-about {
             display: flex;
-            .about__left {
-                width: percentage(2/3);
-                .research-text {
-                    margin-bottom: 2rem;
-                }
+            
+            
+            .research-text {
+                width: 50%;
+                margin-bottom: 2rem;
             }
+            
+            .details {
+                width: 45rem;
+                margin-right: 5rem;
+                .detail__group {
+                    border-bottom: 1px solid $clay-blue;
+                    padding-bottom: 1rem;
 
-            .about__right {
-                width: percentage(1/3);
-                .details {
-                    width: 20rem;
-                    float: right;
-                    .detail__group {
-                        border-bottom: 1px solid $clay-blue;
-                        padding-bottom: 1rem;
-
-                        &:not(:first-of-type) {
-                            padding-top: 0.6rem;
-                        }
-                        
-                        .detail__type {
-                            color: $dark-blue;
-                            font-weight: bold;
-                        }
+                    &:not(:first-of-type) {
+                        padding-top: 0.6rem;
+                    }
+                    
+                    .detail__type {
+                        color: $dark-blue;
+                        font-weight: bold;
+                    }
+                    a.detail {
+                        text-decoration: underline;
                     }
                 }
-            }
+            }     
         }
     }
 }

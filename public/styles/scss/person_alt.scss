@@ -1,0 +1,66 @@
+#person-page {
+    .hero-content {
+        /*        background: $white;*/
+        background: linear-gradient(180deg, $clay-blue 50%, $bg-gray 50%);
+        padding: 2rem 1.5rem;
+        .hero__inner {
+            display: flex;
+            flex-direction: column;
+            padding-top: 1.1rem;
+            .image {
+                max-width: percentage(1/7);
+                margin-right: 2rem;
+            }
+            .page-title {
+                font-family: $family-primary;
+                color: $clay-blue;
+                font-size: 1.6rem;
+                line-height: 0.9;
+                margin-bottom: 0.8rem;
+            }
+            .underline--yellow {
+                width: 4rem;
+                margin: 0 0 1rem;
+            }
+
+            .page-tag {
+                color: $purp;
+                font-weight: bold;
+                font-size: 0.8rem;
+            }
+
+
+        }
+    }
+    .person-content {
+        .section-inner {
+           /* padding: 4rem 0;*/
+            .person-about {
+                display: flex;
+                .person-description {
+                    max-width: percentage(1/3);
+                    .person-text {
+                        margin-bottom: 2rem;
+                    }
+                }
+                
+                .touch {
+                    color: $purp;
+                    font-weight: bold;
+                    margin-bottom: 1rem;
+                }
+                .details {
+                    @include details(auto);
+                    .detail__group {
+                       padding-right: 1rem;
+                       margin-right: 5rem;
+                    }
+                    i {
+                        color: $purp;
+                        margin-right: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}

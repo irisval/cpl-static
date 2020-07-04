@@ -53,3 +53,17 @@
         width: $width;
     }
 }
+
+@mixin details($width) {
+    width: $width;
+  
+    .detail__group {
+        border-bottom: 0.5px solid $clay-blue;
+        padding-bottom: 1rem;
+
+        &:not(:first-of-type) {
+            padding-top: 0.6rem;
+        }
+
+    }          
+}

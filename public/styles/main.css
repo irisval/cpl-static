@@ -637,6 +637,84 @@
   margin-bottom: 6rem;
 }
 
+#person-page .hero-content {
+  background: linear-gradient(180deg, #8894AD 50%, #F8F9FE 50%);
+  padding: 2rem 1.5rem;
+}
+#person-page .hero-content .hero__inner {
+  display: flex;
+  justify-content: space-between;
+}
+#person-page .hero-content .hero__inner .hero__left {
+  width: 66.6666666667%;
+  padding-top: 2rem;
+}
+#person-page .hero-content .hero__inner .hero__left .page-title {
+  font-family: "Work Sans";
+  color: #FFF;
+  font-size: 1.6rem;
+  line-height: 0.9;
+  margin-bottom: 0.8rem;
+}
+#person-page .hero-content .hero__inner .hero__left .underline--yellow {
+  width: 4rem;
+  margin: 0 0 1rem;
+}
+#person-page .hero-content .hero__inner .hero__left .page-tag {
+  color: #4947C0;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+#person-page .hero-content .hero__inner .hero__right {
+  display: flex;
+  justify-content: flex-end;
+  width: 33.3333333333%;
+  margin: auto 0;
+}
+#person-page .hero-content .hero__inner .hero__right .image {
+  max-width: 60%;
+}
+#person-page .person-content {
+  min-height: calc(100vh - 25rem);
+}
+#person-page .person-content .person-about {
+  display: flex;
+}
+#person-page .person-content .person-about .about__left {
+  width: 66.6666666667%;
+}
+#person-page .person-content .person-about .about__left .person-description {
+  margin-top: -5rem;
+  width: 75%;
+}
+#person-page .person-content .person-about .about__left .person-description .person-text {
+  margin-bottom: 2rem;
+}
+#person-page .person-content .person-about .about__right {
+  width: 33.3333333333%;
+}
+#person-page .person-content .person-about .about__right .touch {
+  color: #4947C0;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+#person-page .person-content .person-about .about__right .details {
+  width: auto;
+  float: right;
+  padding-right: 1rem;
+}
+#person-page .person-content .person-about .about__right .details .detail__group {
+  border-bottom: 0.5px solid #8894AD;
+  padding-bottom: 1rem;
+}
+#person-page .person-content .person-about .about__right .details .detail__group:not(:first-of-type) {
+  padding-top: 0.6rem;
+}
+#person-page .person-content .person-about .about__right .details i {
+  color: #4947C0;
+  margin-right: 1.5rem;
+}
+
 #research-single-page .hero-content {
   background: #FFF;
   padding: 2rem 1.5rem;
@@ -694,13 +772,13 @@
   float: right;
 }
 #research-single-page .research-single-content .research-single-about .about__right .details .detail__group {
-  border-bottom: 1px solid #8894AD;
+  border-bottom: 0.5px solid #8894AD;
   padding-bottom: 1rem;
 }
 #research-single-page .research-single-content .research-single-about .about__right .details .detail__group:not(:first-of-type) {
   padding-top: 0.6rem;
 }
-#research-single-page .research-single-content .research-single-about .about__right .details .detail__group .detail__type {
+#research-single-page .research-single-content .research-single-about .about__right .details .detail__type {
   color: #364E81;
   font-weight: bold;
 }
@@ -748,29 +826,27 @@
 #research-single-alt-page .research-single-alt-content .research-single-alt-about {
   display: flex;
 }
-#research-single-alt-page .research-single-alt-content .research-single-alt-about .about__left {
-  width: 66.6666666667%;
-}
-#research-single-alt-page .research-single-alt-content .research-single-alt-about .about__left .research-text {
+#research-single-alt-page .research-single-alt-content .research-single-alt-about .research-text {
+  width: 50%;
   margin-bottom: 2rem;
 }
-#research-single-alt-page .research-single-alt-content .research-single-alt-about .about__right {
-  width: 33.3333333333%;
+#research-single-alt-page .research-single-alt-content .research-single-alt-about .details {
+  width: 45rem;
+  margin-right: 5rem;
 }
-#research-single-alt-page .research-single-alt-content .research-single-alt-about .about__right .details {
-  width: 20rem;
-  float: right;
-}
-#research-single-alt-page .research-single-alt-content .research-single-alt-about .about__right .details .detail__group {
+#research-single-alt-page .research-single-alt-content .research-single-alt-about .details .detail__group {
   border-bottom: 1px solid #8894AD;
   padding-bottom: 1rem;
 }
-#research-single-alt-page .research-single-alt-content .research-single-alt-about .about__right .details .detail__group:not(:first-of-type) {
+#research-single-alt-page .research-single-alt-content .research-single-alt-about .details .detail__group:not(:first-of-type) {
   padding-top: 0.6rem;
 }
-#research-single-alt-page .research-single-alt-content .research-single-alt-about .about__right .details .detail__group .detail__type {
+#research-single-alt-page .research-single-alt-content .research-single-alt-about .details .detail__group .detail__type {
   color: #364E81;
   font-weight: bold;
+}
+#research-single-alt-page .research-single-alt-content .research-single-alt-about .details .detail__group a.detail {
+  text-decoration: underline;
 }
 
 html {
