@@ -535,6 +535,140 @@
   color: #8894AD;
 }
 
+#about-page .hero {
+  /*height: calc(100vh - $nav-height); using variable doesn't work*/
+  height: calc(100vh - 3.2rem);
+  background: url("../img/about/hero-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #D7E2E8;
+  background-attachment: fixed;
+}
+#about-page .hero .tagline-block {
+  display: inline-block;
+}
+#about-page .hero .tagline-block .tagline {
+  font-family: "Domine";
+  font-weight: bold;
+  color: #FFF;
+  font-size: 3.5rem;
+}
+#about-page .hero .tagline-block .underline--yellow {
+  width: 100%;
+  margin: 0rem 0 2rem;
+}
+#about-page .hero .tagline-description {
+  color: #FFF;
+}
+#about-page .hero .tagline-description a {
+  color: #FFF;
+  text-decoration: underline;
+}
+#about-page .hero .container {
+  height: 100%;
+}
+#about-page .hero .hero__inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+#about-page .hero .hero__inner .hero__left {
+  width: 66.6666666667%;
+  padding-right: 5rem;
+  padding-bottom: 4.5rem;
+}
+#about-page .hero .hero__inner .hero__right {
+  display: flex;
+  width: 33.3333333333%;
+}
+#about-page .section-inner {
+  padding: 2rem 0 5rem;
+}
+#about-page .about-events {
+  background: #FFF;
+}
+#about-page .about-events .past-link {
+  text-decoration: underline;
+  font-family: "Kollektif";
+  font-weight: 0.8rem;
+  float: right;
+  color: #96919A;
+}
+#about-page .about-events .events-list {
+  margin: 3rem 0 1rem;
+}
+#about-page .about-events .events-list .event {
+  display: flex;
+  border-bottom: 0.5px solid #C4C4C4;
+  padding: 2rem 0;
+  margin: auto 0;
+}
+#about-page .about-events .events-list .event .event__date {
+  font-family: "Kollektif";
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #FEB617;
+}
+#about-page .about-events .events-list .event .event__title {
+  font-family: "Domine";
+  text-decoration: underline;
+  font-weight: bold;
+  color: #8894AD;
+  font-size: 1.5rem;
+}
+#about-page .about-events .events-list .event .event__description, #about-page .about-events .events-list .event .event__location {
+  font-weight: 400;
+}
+#about-page .about-events .events-list .event:first-of-type {
+  border-top: 0.5px solid #C4C4C4;
+}
+#about-page .about-events .events-list .event .image {
+  margin-right: 2rem;
+  max-width: 15%;
+}
+#about-page .about-events .events-list .event .event__details {
+  width: 70%;
+}
+#about-page .about-events .events-list .event .event__details .event__date {
+  margin-bottom: 0.5rem;
+}
+#about-page .about-events .events-list .event .event__details .event__title {
+  margin-bottom: 1rem;
+}
+#about-page .about-events .events-list .event .event__details .event__location {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+}
+#about-page .about-facilities .facilities-description {
+  margin-bottom: 2rem;
+}
+#about-page .about-facilities .facilities-about {
+  margin: 1rem 0 4rem;
+}
+#about-page .about-facilities .facility {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.5px solid #C4C4C4;
+  /* padding: 1rem 4rem;*/
+  padding: 1rem 0;
+  margin: auto 0;
+}
+#about-page .about-facilities .facility:first-of-type {
+  border-top: 0.5px solid #C4C4C4;
+}
+#about-page .about-facilities .facility .facility__details {
+  margin: auto 0;
+}
+#about-page .about-facilities .facility .facility__name {
+  color: #8894AD;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+#about-page .about-facilities .facility .image {
+  max-width: 10rem;
+}
+
 #research-page .research-all .section-inner {
   padding: 1rem 0;
 }
@@ -701,7 +835,7 @@
 #person-page .person-content .person-about .about__right .details {
   width: auto;
   float: right;
-  padding-right: 1rem;
+  /*               padding-right: 1rem;*/
 }
 #person-page .person-content .person-about .about__right .details .detail__group {
   border-bottom: 0.5px solid #8894AD;
@@ -709,6 +843,12 @@
 }
 #person-page .person-content .person-about .about__right .details .detail__group:not(:first-of-type) {
   padding-top: 0.6rem;
+}
+#person-page .person-content .person-about .about__right .details .detail__group a {
+  text-decoration: underline;
+}
+#person-page .person-content .person-about .about__right .details .detail__group {
+  padding-right: 1.5rem;
 }
 #person-page .person-content .person-about .about__right .details i {
   color: #4947C0;
@@ -777,6 +917,9 @@
 }
 #research-single-page .research-single-content .research-single-about .about__right .details .detail__group:not(:first-of-type) {
   padding-top: 0.6rem;
+}
+#research-single-page .research-single-content .research-single-about .about__right .details .detail__group a {
+  text-decoration: underline;
 }
 #research-single-page .research-single-content .research-single-about .about__right .details .detail__type {
   color: #364E81;

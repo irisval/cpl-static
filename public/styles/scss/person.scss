@@ -62,12 +62,14 @@
             .details {
                 @include details(auto);
                 float: right;
-                padding-right: 1rem;
+ /*               padding-right: 1rem;*/
+                .detail__group {
+                    padding-right: 1.5rem;
+                }
                 i {
                     color: $purp;
                     margin-right: 1.5rem;
                 }
-
             }
         }
     }
