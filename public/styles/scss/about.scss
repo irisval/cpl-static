@@ -9,7 +9,7 @@
         background-color: $light-blue;
         background-attachment: fixed;
     
-        .tagline-block {
+        .page-title-block {
             display: inline-block;
             .tagline {
                @include callout-text($white, 3.5rem);
