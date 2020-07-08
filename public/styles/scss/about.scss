@@ -1,52 +1,8 @@
 #about-page {
-    .hero {
+    .waves-hero {
         /*height: calc(100vh - $nav-height); using variable doesn't work*/
         height: calc(100vh - 3.2rem);
-        background: url("../img/about/hero-bg.png");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-color: $light-blue;
-        background-attachment: fixed;
-    
-        .page-title-block {
-            display: inline-block;
-            .tagline {
-               @include callout-text($white, 3.5rem);
-            }
-            .underline--yellow {
-                width: 100%;
-                margin: 0rem 0 2rem;
-            }
-        }
-
-        .tagline-description {
-            color: $white;
-            a {
-                color: $white;
-                text-decoration: underline;
-            }
-        }
-
-        .container {
-            height: 100%;
-        }
-        .hero__inner {
-            height: 100%;
-            display: flex;
-            align-items: center;
-            .hero__left {
-                width: percentage(2/3);
-                padding-right: 5rem;
-                padding-bottom: 4.5rem;
-            }
-            .hero__right {
-                display: flex;
-                width: percentage(1/3);
-            }
-        } 
     }
-
     .section-inner {
         padding: 2rem 0 5rem;
     }

@@ -11,6 +11,7 @@
 @import "person.scss";
 @import "research_single.scss";
 @import "research_single_alt.scss";
+@import "get_involved.scss";
 @import "news.scss";
 
 html {
@@ -21,7 +22,6 @@ body {
   margin: 0;
   font-size: 1.6rem; /* 16px */
 }
-
 
 .nav {
   .logo {
@@ -36,7 +36,7 @@ body {
     z-index: 1000;
     font-family: $kollektif;
     color: $main-gray;
-    background-color: $white;  
+    background-color: $white;
     font-size: 0.8rem;
     font-weight: bold;
     .fa-angle-down {
@@ -47,9 +47,6 @@ body {
       margin-left: 1rem;
     }
   }
- 
-
-
 }
 
 .footer {
@@ -71,10 +68,12 @@ body {
       }
     }
   }
-  .contact-info i, .contact-info p {
+  .contact-info i,
+  .contact-info p {
     display: inline-block;
   }
-  .category, .contact-info i {
+  .category,
+  .contact-info i {
     color: $light-blue;
   }
   .contact-info {
@@ -89,10 +88,11 @@ body {
     &:nth-of-type(2) {
       border-left: 1px solid $light-blue;
       border-right: 1px solid $light-blue;
-    } 
-    &:nth-of-type(2), &:nth-of-type(3) {
+    }
+    &:nth-of-type(2),
+    &:nth-of-type(3) {
       padding-left: 2rem;
-    } 
+    }
   }
   .links-col {
     display: flex;
@@ -128,11 +128,10 @@ body {
 .divider {
   border-top: 1px solid $light-gray;
 }
-.tabs a:hover, .tabs li.is-active a {
+.tabs a:hover,
+.tabs li.is-active a {
   border-bottom-width: 2.5px;
 }
-
-
 
 button {
   border-radius: 1px !important;
@@ -146,42 +145,87 @@ button {
 }
 
 .cutoff-hero {
-    background: linear-gradient(180deg, $clay-blue 50%, $bg-gray 50%);
-/*        background: $clay-blue;*/
-    .hero-content {
-        padding: 2rem 1.5rem;
-        .hero__inner {
-            display: flex;
-            justify-content: space-between;
-            .hero__left {
-                padding-top: 3rem;
-                margin: auto 0;
-                .page-title-block {
-                    background: $bg-gray;
-                    display: inline-block;
-                    .page-title {
-                        @include callout-text($clay-blue, 2.5rem);
-                      /*  display: inline-block;
-                        width: 100%;*/
-                    }
-                    .underline--yellow {
-                        width: 100%;
-                        margin: 0 0 1rem;
-                    }
-                }
-                
-                .page-tag {
-                    color: $main-gray;
-                }
-            }
-            .hero__right {
-                max-width: 40%;
-            }
+  background: linear-gradient(180deg, $clay-blue 50%, $bg-gray 50%);
+  /*        background: $clay-blue;*/
+  .hero-content {
+    padding: 2rem 1.5rem;
+    .hero__inner {
+      display: flex;
+      justify-content: space-between;
+      .hero__left {
+        padding-top: 3rem;
+        margin: auto 0;
+        .page-title-block {
+          background: $bg-gray;
+          display: inline-block;
+          .page-title {
+            @include callout-text($clay-blue, 2.5rem);
+            /*  display: inline-block;
+                      width: 100%;*/
+          }
+          .underline--yellow {
+            width: 100%;
+            margin: 0 0 1rem;
+          }
         }
-        
-    }  
+
+        .page-tag {
+          color: $main-gray;
+        }
+      }
+      .hero__right {
+        max-width: 40%;
+      }
+    }
+  }
 }
 
+.waves-hero {
+  
+  background: url("../img/about/hero-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $light-blue;
+  background-attachment: fixed;
+
+  .page-title-block {
+    display: inline-block;
+    .tagline {
+      @include callout-text($white, 3.5rem);
+    }
+    .underline--yellow {
+      width: 100%;
+      margin: 0rem 0 2rem;
+    }
+  }
+
+  .tagline-description {
+    color: $white;
+    a {
+      color: $white;
+      text-decoration: underline;
+    }
+  }
+
+  .container {
+    height: 100%;
+  }
+  .hero__inner {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    .hero__left {
+      width: percentage(2/3);
+      padding-right: 5rem;
+      padding-bottom: 4.5rem;
+    }
+    .hero__right {
+      display: flex;
+      width: percentage(1/3);
+    }
+  }
+}
 
 /*@import "bulma-0.9.0/bulma.sass";*/
 @import "bulma-0.9.0/sass/utilities/_all.sass";

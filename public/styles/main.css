@@ -581,52 +581,9 @@
   color: #8894AD;
 }
 
-#about-page .hero {
+#about-page .waves-hero {
   /*height: calc(100vh - $nav-height); using variable doesn't work*/
   height: calc(100vh - 3.2rem);
-  background: url("../img/about/hero-bg.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: #D7E2E8;
-  background-attachment: fixed;
-}
-#about-page .hero .page-title-block {
-  display: inline-block;
-}
-#about-page .hero .page-title-block .tagline {
-  font-family: "Domine";
-  font-weight: bold;
-  color: #FFF;
-  font-size: 3.5rem;
-}
-#about-page .hero .page-title-block .underline--yellow {
-  width: 100%;
-  margin: 0rem 0 2rem;
-}
-#about-page .hero .tagline-description {
-  color: #FFF;
-}
-#about-page .hero .tagline-description a {
-  color: #FFF;
-  text-decoration: underline;
-}
-#about-page .hero .container {
-  height: 100%;
-}
-#about-page .hero .hero__inner {
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-#about-page .hero .hero__inner .hero__left {
-  width: 66.6666666667%;
-  padding-right: 5rem;
-  padding-bottom: 4.5rem;
-}
-#about-page .hero .hero__inner .hero__right {
-  display: flex;
-  width: 33.3333333333%;
 }
 #about-page .section-inner {
   padding: 2rem 0 5rem;
@@ -1038,6 +995,22 @@
   text-decoration: underline;
 }
 
+#getinvolved-page .waves-hero {
+  padding: 3rem 0 2rem;
+}
+#getinvolved-page .section-inner {
+  padding: 2rem 0 5rem;
+}
+#getinvolved-page .involvement {
+  margin-bottom: 3rem;
+}
+#getinvolved-page .involvement p {
+  margin: 1rem 0;
+}
+#getinvolved-page .involvement a {
+  text-decoration: underline;
+}
+
 #news-page .page-title-block {
   margin-top: 3rem;
   display: inline-block;
@@ -1144,10 +1117,12 @@ body {
   color: #F8F9FE;
   font-size: 1.2rem;
 }
-.footer .contact-info i, .footer .contact-info p {
+.footer .contact-info i,
+.footer .contact-info p {
   display: inline-block;
 }
-.footer .category, .footer .contact-info i {
+.footer .category,
+.footer .contact-info i {
   color: #D7E2E8;
 }
 .footer .contact-info {
@@ -1203,7 +1178,8 @@ body {
   border-top: 1px solid #C4C4C4;
 }
 
-.tabs a:hover, .tabs li.is-active a {
+.tabs a:hover,
+.tabs li.is-active a {
   border-bottom-width: 2.5px;
 }
 
@@ -1243,7 +1219,7 @@ button {
   color: #8894AD;
   font-size: 2.5rem;
   /*  display: inline-block;
-    width: 100%;*/
+            width: 100%;*/
 }
 .cutoff-hero .hero-content .hero__inner .hero__left .page-title-block .underline--yellow {
   width: 100%;
@@ -1254,6 +1230,52 @@ button {
 }
 .cutoff-hero .hero-content .hero__inner .hero__right {
   max-width: 40%;
+}
+
+.waves-hero {
+  background: url("../img/about/hero-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #D7E2E8;
+  background-attachment: fixed;
+}
+.waves-hero .page-title-block {
+  display: inline-block;
+}
+.waves-hero .page-title-block .tagline {
+  font-family: "Domine";
+  font-weight: bold;
+  color: #FFF;
+  font-size: 3.5rem;
+}
+.waves-hero .page-title-block .underline--yellow {
+  width: 100%;
+  margin: 0rem 0 2rem;
+}
+.waves-hero .tagline-description {
+  color: #FFF;
+}
+.waves-hero .tagline-description a {
+  color: #FFF;
+  text-decoration: underline;
+}
+.waves-hero .container {
+  height: 100%;
+}
+.waves-hero .hero__inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.waves-hero .hero__inner .hero__left {
+  width: 66.6666666667%;
+  padding-right: 5rem;
+  padding-bottom: 4.5rem;
+}
+.waves-hero .hero__inner .hero__right {
+  display: flex;
+  width: 33.3333333333%;
 }
 
 /*@import "bulma-0.9.0/bulma.sass";*/
