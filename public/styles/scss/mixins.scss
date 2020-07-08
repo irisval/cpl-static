@@ -69,3 +69,30 @@
         }
     }          
 }
+
+/*https://github.com/jgthms/bulma/issues/1677*/
+$mobile-md: 568px !default;
+$mobile-lg: 600px;
+$tablet-md: 850px;
+
+@mixin mobile-sm {
+  @media screen and (max-width: $mobile-md - 1), print {
+    @content;
+  }
+}
+
+@mixin mobile-lg {
+  @media screen and (min-width: $mobile-lg), print {
+    @content;
+  }
+}
+
+
+@mixin tablet-md {
+  @media screen and (min-width: $tablet-md), print {
+    @content;
+  }
+}
+
+
+

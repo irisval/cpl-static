@@ -15,17 +15,25 @@ $card-paper-min: 13rem;
     }
 }
 
-.card {
-   /* max-width: 90%;*/
-    margin: 0 5%;
-    color: $main-gray !important;
-    .card-content {
-        padding: $card-content-padding;
-        /*padding: 0.7rem 1rem 1.5rem;*/
-        .card-content__bottom {
-            margin-top: 0.7rem;
-        }
-    }
+.card:not(.card-home-news) {
+ /* max-width: 90%;*/
+/*   margin: 0 5%;*/
+
+ @include until($mobile-md) {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+
+color: $main-gray !important;
+.card-content {
+ /*     padding: $card-content-padding;*/
+ padding: 0.7rem 1rem 1.5rem;
+ .card-content__bottom {
+    margin-top: 0.7rem;
+}
+
+}
 }
 
 .link-span { 
@@ -99,31 +107,55 @@ $card-paper-min: 13rem;
     @include card($purp);
     display: flex;
     padding: $card-content-padding;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
 
     .card-image {
         width: 35%;
+        flex-grow: 1;
+/*        margin: 0 1em;*/
     }
-
     .card-content {
-        padding: 0 0 0 1rem;
-        width: 65%;
-        .name {
-            font-weight: 700;
-            color: $black;
-            font-size: 1.2rem;
-        }
-        
-        .phd-tag {
-            font-size: $subtext-size;
-            color: $purp;
-            font-weight: 500;
-            line-height: 0.8;
-        }
+        flex-grow: 1;
+    }
+    .card-content__bottom {
+        width: 100%;
+        align-self: flex-end;
+        flex-grow: 2;
+    }
+    .name {
+        font-weight: 700;
+        color: $black;
+        font-size: 1.2rem;
+    }
+    .phd-tag {
+                font-size: $subtext-size;
+                color: $purp;
+                font-weight: 500;
+                line-height: 0.8;
+            }
 
-        .card-content__bottom {
-            font-size: 0.9rem;
+
+    @include from($desktop) {
+        .card-content {
+            padding: 0 0 0 1rem;
+            width: 65%;
+            .card-content__bottom {
+                font-size: 1rem;
+            }
         }
     }
+    @include until($mobile-lg) {
+         .card-content {
+            padding: 0 0 0 1rem;
+            width: 65%;
+            .card-content__bottom {
+                font-size: 1rem;
+            }
+        }
+    }
+    
 }
 
 @mixin card-person($color) {
@@ -156,13 +188,13 @@ $card-paper-min: 13rem;
 
         .card-content__bottom {
           /*  margin-top: 1.3rem;*/
-            line-height: 1.75;
-            font-size: 0.9rem;
-            .email {
-                text-decoration: underline;
-            }
+          line-height: 1.75;
+          font-size: 0.9rem;
+          .email {
+            text-decoration: underline;
         }
     }
+}
 }
 
 .card-student {
@@ -183,6 +215,11 @@ $card-paper-min: 13rem;
     /*padding: $card-content-padding;*/
     margin: 1rem 3rem;
 
+    @include until($tablet-md) {
+        width: 80vw !important;
+        margin-left: 10vw;
+        margin-right: 10vw;
+    }
     .card-image {
         width: 40%;
         margin-left: -1rem;
@@ -195,7 +232,10 @@ $card-paper-min: 13rem;
         .headline {
             font-weight: 700;
             color: $main-gray;
-            font-size: 1.3rem;
+            font-size: 1rem;
+             @include from($desktop) {
+                font-size: 1.25rem;
+             }
         }
         
         .card-content__bottom {
@@ -248,7 +288,7 @@ $card-paper-min: 13rem;
                 text-decoration: underline;
             }
         }
-     
+
         .date {
             text-align: right;
             font-size: $subtext-size;

@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+@import "bulma-0.9.0/sass/utilities/_all.sass";
 @import "globals.scss";
 @import "mixins.scss";
 @import "cards.scss";
@@ -23,145 +24,155 @@ body {
   font-size: 1.6rem; /* 16px */
 }
 
-.nav {
-  .logo {
-    max-width: 90px;
-  }
-  height: $nav-height;
-  top: 0;
-  .nav-inner {
-    position: fixed;
+
+  .navbar {
+    max-height: 3.25rem;
+    font-size: 0.85rem;
+    .navbar-item, .navbar-link {
+      padding: 0rem 0.75rem;
+    }
+    .logo {
+      max-width: 90px;
+      img {
+        max-height: initial;
+      }
+    }
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    z-index: 1000;
-    font-family: $kollektif;
+    font-family: $family-primary;
     color: $main-gray;
     background-color: $white;
     font-size: 0.8rem;
-    font-weight: bold;
-    .fa-angle-down {
-      color: $mustard;
-      padding-left: 5px;
+    font-weight: 500;
+    .navbar-link::after {
+      border-color: $mustard !important;
     }
-    .nav__link {
-      margin-left: 1rem;
-    }
-  }
-}
-
-.footer {
-  background: $clay-blue;
-  color: $bg-gray;
-  a {
-    color: $bg-gray;
-  }
-  .footer-cornell {
-    padding-top: 1.5rem;
-    display: flex;
-    .logo {
-      max-width: 80px;
-    }
-    .footer-cornell-name {
-      margin-left: 2rem;
-      .lab-name {
-        @include callout-text($bg-gray, 1.2rem);
+    .navbar-menu.is-active { 
+      .navbar-item, .navbar-link {
+        text-align: center;
+        font-size: 0.9rem;
+        padding: 0;
+        margin: 0.5rem;
       }
     }
   }
-  .contact-info i,
-  .contact-info p {
-    display: inline-block;
+  .footer {
+    background: $clay-blue;
+    color: $bg-gray;
+    a {
+      color: $bg-gray;
+    }
+    .footer-cornell {
+      padding-top: 1.5rem;
+      display: flex;
+      .logo {
+        max-width: 80px;
+      }
+      .footer-cornell-name {
+        margin-left: 2rem;
+        .lab-name {
+          @include callout-text($bg-gray, 1.2rem);
+        }
+      }
+    }
+    .contact-info i,
+    .contact-info p {
+      display: inline-block;
+    }
+    .category,
+    .contact-info i {
+      color: $light-blue;
+    }
+    .contact-info {
+      margin: 1rem 0;
+    }
+    .category {
+      font-weight: 700;
+    }
+    .tricol {
+      align-items: flex-start;
+      margin: 3.5rem 0rem 1rem;
+      &:nth-of-type(2) {
+        border-left: 1px solid $light-blue;
+        border-right: 1px solid $light-blue;
+      }
+      &:nth-of-type(2),
+      &:nth-of-type(3) {
+        padding-left: 2rem;
+      }
+    }
+    .links-columns {
+      @include until($mobile-md) {
+        display: flex;
+      }
+    }
+    .links-col {
+      display: flex;
+      flex-direction: column;
+      a {
+        margin: 0.5rem 0;
+      }
+    }
+    .email {
+      text-decoration: underline;
+    }
+    .copyright {
+      color: $light-blue;
+      padding-bottom: 1.1rem;
+    }
   }
-  .category,
-  .contact-info i {
-    color: $light-blue;
+
+  .underline--yellow {
+    @include underline($mustard);
   }
-  .contact-info {
-    margin: 1rem 0;
+
+  .underline--clayblue {
+    @include underline($clay-blue);
   }
-  .category {
+
+  .section-title {
+    font-family: $kollektif;
+    font-size: $section-title-size;
+    text-decoration: underline;
+    text-decoration-color: $mustard;
+  }
+
+  .divider {
+    border-top: 1px solid $light-gray;
+  }
+  .tabs a:hover,
+  .tabs li.is-active a {
+    border-bottom-width: 2.5px;
+  }
+
+  button {
+    border-radius: 1px !important;
     font-weight: 700;
   }
-  .tricol {
-    align-items: flex-start;
-    margin: 3.5rem 0rem 1rem;
-    &:nth-of-type(2) {
-      border-left: 1px solid $light-blue;
-      border-right: 1px solid $light-blue;
-    }
-    &:nth-of-type(2),
-    &:nth-of-type(3) {
-      padding-left: 2rem;
-    }
+
+  .clear-button {
+    background: none !important;
+    padding-left: 2.5rem !important;
+    padding-right: 2.5rem !important;
   }
-  .links-col {
-    display: flex;
-    flex-direction: column;
-    a {
-      margin: 0.5rem 0;
-    }
-  }
-  .email {
-    text-decoration: underline;
-  }
-  .copyright {
-    color: $light-blue;
-    padding-bottom: 1.1rem;
-  }
-}
 
-.underline--yellow {
-  @include underline($mustard);
-}
-
-.underline--clayblue {
-  @include underline($clay-blue);
-}
-
-.section-title {
-  font-family: $kollektif;
-  font-size: $section-title-size;
-  text-decoration: underline;
-  text-decoration-color: $mustard;
-}
-
-.divider {
-  border-top: 1px solid $light-gray;
-}
-.tabs a:hover,
-.tabs li.is-active a {
-  border-bottom-width: 2.5px;
-}
-
-button {
-  border-radius: 1px !important;
-  font-weight: 700;
-}
-
-.clear-button {
-  background: none !important;
-  padding-left: 2.5rem !important;
-  padding-right: 2.5rem !important;
-}
-
-.cutoff-hero {
-  background: linear-gradient(180deg, $clay-blue 50%, $bg-gray 50%);
-  /*        background: $clay-blue;*/
-  .hero-content {
-    padding: 2rem 1.5rem;
-    .hero__inner {
-      display: flex;
-      justify-content: space-between;
-      .hero__left {
-        padding-top: 3rem;
-        margin: auto 0;
-        .page-title-block {
-          background: $bg-gray;
-          display: inline-block;
-          .page-title {
-            @include callout-text($clay-blue, 2.5rem);
+  .cutoff-hero {
+    background: linear-gradient(180deg, $clay-blue 50%, $bg-gray 50%);
+    /*        background: $clay-blue;*/
+    .hero-content {
+      padding: 2rem 1.5rem;
+      .hero__inner {
+        display: flex;
+        justify-content: space-between;
+        .hero__left {
+          padding-top: 3rem;
+          margin: auto 0;
+          .page-title-block {
+            background: $bg-gray;
+            display: inline-block;
+            .page-title {
+              @include callout-text($clay-blue, 2.5rem);
             /*  display: inline-block;
-                      width: 100%;*/
+            width: 100%;*/
           }
           .underline--yellow {
             width: 100%;
@@ -181,7 +192,6 @@ button {
 }
 
 .waves-hero {
-  
   background: url("../img/about/hero-bg.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -227,11 +237,30 @@ button {
   }
 }
 
+.columns {
+ @include from($mobile-md) {
+  display: flex;
+}
+}
+
+.column.is-one-third-tablet {
+  @include from($mobile-md) {
+    flex: none;
+    width: 33.3333%;
+  }
+  @include until($mobile-md) {
+    flex: none;
+    width: 100%;
+  }
+}
+
+
+
 /*@import "bulma-0.9.0/bulma.sass";*/
-@import "bulma-0.9.0/sass/utilities/_all.sass";
 @import "bulma-0.9.0/sass/base/_all.sass";
 @import "bulma-0.9.0/sass/components/level.sass";
 @import "bulma-0.9.0/sass/components/tabs.sass";
+@import "bulma-0.9.0/sass/components/navbar.sass";
 @import "bulma-0.9.0/sass/components/dropdown.sass";
 @import "bulma-0.9.0/sass/components/card.sass";
 @import "bulma-0.9.0/sass/elements/box.sass";
