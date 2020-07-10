@@ -162,6 +162,12 @@ color: $main-gray !important;
     @include card($color);
     display: flex;
     padding: $card-content-padding 1rem;
+    
+    &.card-student, &.card-faculty, &.card-alum {
+        @include until($mobile-lg) {
+            width: 100%;
+        } 
+    }
 
     .card-image {
         width: 35%;

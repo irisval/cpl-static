@@ -11,15 +11,6 @@ $(document).ready(function(){
     variableWidth: true,
     prevArrow: $('#left'),
     nextArrow: $('#right'),
-    draggable: true,
-    // responsive: [
-    // {
-    //   breakpoint: 768,
-    //   settings: {
-    //     slidesToShow: 1,
-    //     slidesToScroll: 1
-    //   }
-    // }
-    // ]
+    draggable: true
   });
 });

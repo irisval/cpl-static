@@ -17,9 +17,38 @@
         .dropdown-author {
             @include dropdown(20rem);
         }
+        .dropdown-area {
+            @include until ($mobile-lg) {
+                display: flex;
+                width: 80%;
+                margin: 0 auto;
+                justify-content: space-between;
+                .dropdown-year {
+                    margin-right: 0;
+                }
+
+
+                .dropdown {
+                    width: 100%;
+                    .dropdown-trigger {
+                        width: 90%;
+                    }
+                    .button {
+                        width: 100%;
+                    }
+                }
+            }
+        }
         
-        .clear-button {
-            margin: 0 auto;
+        
+        .buttons-col {
+            text-align: center;
+            .clear-button {
+                margin: 0 auto !important;
+            }
+            @include until ($mobile-lg) {
+                margin-top: 0;
+            }
         }
     }
 }

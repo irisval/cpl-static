@@ -11,6 +11,23 @@
         }
         .dropdown {
             @include dropdown(15rem);
+            @include until($mobile-lg) {
+                justify-content: center;
+                width: 100%;
+                .dropdown-trigger {
+                    width: 80%;
+                    .button {
+                        width: 100%;
+                    }
+                }
+                .dropdown-menu {
+                    width: 100%;
+                    .dropdown-content {
+                        width: 80%;
+                        margin: 0 auto;
+                    }
+                }
+            }
         }
     }
 }

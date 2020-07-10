@@ -344,6 +344,11 @@
   bottom: 0;
   border-top: 0.35rem solid #4947C0;
 }
+@media screen and (max-width: 599px) {
+  .card-student.card-student, .card-student.card-faculty, .card-student.card-alum {
+    width: 100%;
+  }
+}
 .card-student .card-image {
   width: 35%;
 }
@@ -387,6 +392,11 @@
   bottom: 0;
   border-top: 0.35rem solid #2E72FF;
 }
+@media screen and (max-width: 599px) {
+  .card-faculty.card-student, .card-faculty.card-faculty, .card-faculty.card-alum {
+    width: 100%;
+  }
+}
 .card-faculty .card-image {
   width: 35%;
 }
@@ -429,6 +439,11 @@
   right: 0;
   bottom: 0;
   border-top: 0.35rem solid #364E81;
+}
+@media screen and (max-width: 599px) {
+  .card-alum.card-student, .card-alum.card-faculty, .card-alum.card-alum {
+    width: 100%;
+  }
 }
 .card-alum .card-image {
   width: 35%;
@@ -916,7 +931,7 @@
   margin: 2.5rem 0;
 }
 #research-page .research-all .columns:last-of-type {
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
 }
 #research-page .research-all .dropdown .dropdown-trigger button {
   background: none;
@@ -940,6 +955,25 @@
 #research-page .research-all .dropdown .dropdown-content {
   width: 15rem;
 }
+@media screen and (max-width: 599px) {
+  #research-page .research-all .dropdown {
+    justify-content: center;
+    width: 100%;
+  }
+  #research-page .research-all .dropdown .dropdown-trigger {
+    width: 80%;
+  }
+  #research-page .research-all .dropdown .dropdown-trigger .button {
+    width: 100%;
+  }
+  #research-page .research-all .dropdown .dropdown-menu {
+    width: 100%;
+  }
+  #research-page .research-all .dropdown .dropdown-menu .dropdown-content {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
 
 #papers-page .papers-all .section-inner {
   padding: 1rem 0;
@@ -948,7 +982,7 @@
   margin: 2.5rem 0;
 }
 #papers-page .papers-all .columns:last-of-type {
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
 }
 #papers-page .papers-all .dropdown-year {
   margin-right: 2em;
@@ -997,18 +1031,56 @@
 #papers-page .papers-all .dropdown-author .dropdown-content {
   width: 20rem;
 }
-#papers-page .papers-all .clear-button {
-  margin: 0 auto;
+@media screen and (max-width: 599px) {
+  #papers-page .papers-all .dropdown-area {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+  #papers-page .papers-all .dropdown-area .dropdown-year {
+    margin-right: 0;
+  }
+  #papers-page .papers-all .dropdown-area .dropdown {
+    width: 100%;
+  }
+  #papers-page .papers-all .dropdown-area .dropdown .dropdown-trigger {
+    width: 90%;
+  }
+  #papers-page .papers-all .dropdown-area .dropdown .button {
+    width: 100%;
+  }
+}
+#papers-page .papers-all .buttons-col {
+  text-align: center;
+}
+#papers-page .papers-all .buttons-col .clear-button {
+  margin: 0 auto !important;
+}
+@media screen and (max-width: 599px) {
+  #papers-page .papers-all .buttons-col {
+    margin-top: 0;
+  }
 }
 
+@media screen and (max-width: 599px) {
+  #whoweare-page .hero__right {
+    padding-left: 1rem;
+  }
+}
 #whoweare-page .whoweare-all .section-inner {
   padding: 1rem 0;
+}
+#whoweare-page .whoweare-all .tabs {
+  width: 90%;
+  margin: 0 auto;
+  font-size: 0.85rem;
 }
 #whoweare-page .whoweare-all .columns {
   margin: 2.5rem 0;
 }
 #whoweare-page .whoweare-all .columns:last-of-type {
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
 }
 
 #person-page .hero-content {
@@ -1475,6 +1547,12 @@ button {
 }
 .cutoff-hero .hero-content .hero__inner .hero__right {
   max-width: 40%;
+}
+@media screen and (max-width: 599px) {
+  .cutoff-hero .hero-content .hero__inner .hero__right {
+    position: absolute;
+    right: 0;
+  }
 }
 
 .waves-hero {

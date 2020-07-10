@@ -186,6 +186,10 @@ body {
       }
       .hero__right {
         max-width: 40%;
+          @include until($mobile-lg) {
+            position: absolute;
+            right: 0
+          }
       }
     }
   }
