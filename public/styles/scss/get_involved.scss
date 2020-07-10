@@ -1,6 +1,21 @@
 #getinvolved-page {
     .waves-hero {
-        padding: 5rem 0 2rem;
+        padding: 0rem 0 2rem;
+        .hero__right {
+            margin-bottom: 2rem;
+        }
+        @include from($mobile-lg) {
+            padding: 5rem 0 2rem;
+            .hero__right {
+                margin-bottom: 0;
+            }
+        }
+
+        @include until(700px) {
+            .tagline {
+                font-size: 2.5rem;
+            }
+        }
     }
      .section-inner {
         padding: 4rem 0 5rem;

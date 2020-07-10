@@ -9,6 +9,12 @@
                 width: percentage(2/3);
                 padding-top: 3rem;
                 padding-right: 5rem;
+                @include until($tablet-md) {
+                    padding-right: 0;
+                    .page-title {
+                        font-size: 1.2rem !important;
+                    }
+                }
                 margin: auto 0;
                 
                 .page-title {
@@ -35,34 +41,53 @@
                 .image {
                     max-width: 60%;
                 }
+                @include until($tablet-md) {
+                   .image {
+                    max-width: 80%;
+                }
             }
         }
     }
-    .research-single-content {
-        .section-inner {
-            padding: 4rem 0;
-        }
-        .research-single-about {
-            display: flex;
-            .about__left {
-                width: percentage(2/3);
-                .research-text {
-                    margin-bottom: 2rem;
-                }
-            }
+}
+.research-single-content {
+    .section-inner {
+        padding: 4rem 0;
+    }
+    .research-single-about {
+        display: flex;
 
-            .about__right {
-                width: percentage(1/3);
-                .details {
-                    @include details(20rem);
-                    float: right;
-                    .detail__type {
-                        color: $dark-blue;
-                        font-weight: bold;
-                    }
-                    
+
+        @include until($tablet-md) {
+            display: flex;
+            flex-direction: column;
+            .about__left, .about__right {
+                width: 100% !important;
+            }
+            .research-description, .details {
+                width: 100% !important;
+            }
+        }
+
+        .about__left {
+            width: percentage(2/3);
+            margin-right: 3rem;
+            .research-text {
+                margin-bottom: 2rem;
+            }
+        }
+
+        .about__right {
+            width: percentage(1/3);
+            .details {
+                @include details(20rem);
+                float: right;
+                .detail__type {
+                    color: $dark-blue;
+                    font-weight: bold;
                 }
+
             }
         }
     }
+}
 }

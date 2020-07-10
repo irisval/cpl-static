@@ -56,11 +56,10 @@
 
 @mixin details($width) {
     width: $width;
-    
+    margin-bottom: $page-bottom;
     .detail__group {
         border-bottom: 0.5px solid $clay-blue;
         padding-bottom: 1rem;
-
         &:not(:first-of-type) {
             padding-top: 0.6rem;
         }
@@ -69,6 +68,7 @@
         }
     }          
 }
+
 
 /*https://github.com/jgthms/bulma/issues/1677*/
 $mobile-md: 568px !default;

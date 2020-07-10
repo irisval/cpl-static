@@ -537,8 +537,9 @@
 
 .card-news {
   display: flex !important;
+  flex-direction: column;
   padding: 1.5rem;
-  margin-bottom: 3rem;
+  margin-bottom: 3rem !important;
 }
 .card-news:after {
   content: "";
@@ -549,15 +550,31 @@
   bottom: 0;
   border-top: 0.35rem solid #595959;
 }
+@media screen and (min-width: 600px) {
+  .card-news {
+    flex-direction: row;
+  }
+}
 .card-news .card-image {
-  width: 33.3333333333%;
+  width: 100%;
   margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 600px) {
+  .card-news .card-image {
+    width: 33.3333333333%;
+  }
 }
 .card-news .home-news-card-content {
   margin: 0 1rem;
-  width: 60%;
+  width: 100%;
   display: flex;
   flex-flow: column nowrap;
+}
+@media screen and (min-width: 600px) {
+  .card-news .home-news-card-content {
+    width: 60%;
+  }
 }
 .card-news .home-news-card-content .headline {
   font-weight: 700;
@@ -838,7 +855,7 @@
   height: calc(100vh - 3.2rem);
 }
 #about-page .section-inner {
-  padding: 2rem 0 5rem;
+  padding: 2rem 0 4rem;
 }
 #about-page .about-events {
   background: #FFF;
@@ -855,9 +872,13 @@
 }
 #about-page .about-events .events-list .event {
   display: flex;
+  flex-direction: column;
   border-bottom: 0.5px solid #C4C4C4;
   padding: 2rem 0;
   margin: auto 0;
+  /*    &:first-of-type {
+          border-top: 0.5px solid $light-gray;
+      }*/
 }
 #about-page .about-events .events-list .event .event__date {
   font-family: "Kollektif";
@@ -875,15 +896,24 @@
 #about-page .about-events .events-list .event .event__description, #about-page .about-events .events-list .event .event__location {
   font-weight: 400;
 }
-#about-page .about-events .events-list .event:first-of-type {
-  border-top: 0.5px solid #C4C4C4;
+@media screen and (min-width: 600px) {
+  #about-page .about-events .events-list .event {
+    flex-direction: row;
+  }
 }
 #about-page .about-events .events-list .event .image {
-  margin-right: 2rem;
-  max-width: 15%;
+  margin-bottom: 2rem;
 }
-#about-page .about-events .events-list .event .event__details {
-  width: 70%;
+@media screen and (min-width: 600px) {
+  #about-page .about-events .events-list .event .image {
+    margin-right: 2rem;
+    max-width: 20%;
+  }
+}
+@media screen and (min-width: 600px) {
+  #about-page .about-events .events-list .event .event__details {
+    width: 70%;
+  }
 }
 #about-page .about-events .events-list .event .event__details .event__date {
   margin-bottom: 0.5rem;
@@ -921,7 +951,7 @@
   margin-bottom: 0.5rem;
 }
 #about-page .about-facilities .facility .image {
-  max-width: 10rem;
+  min-width: 10rem;
 }
 
 #research-page .research-all .section-inner {
@@ -1087,13 +1117,22 @@
   background: linear-gradient(180deg, #8894AD 50%, #F8F9FE 50%);
   padding: 2rem 1.5rem;
 }
+@media screen and (max-width: 599px) {
+  #person-page .hero-content {
+    background: #8894AD;
+  }
+}
 #person-page .hero-content .hero__inner {
   display: flex;
   justify-content: space-between;
 }
 #person-page .hero-content .hero__inner .hero__left {
   width: 66.6666666667%;
-  padding-top: 2rem;
+}
+@media screen and (min-width: 850px) {
+  #person-page .hero-content .hero__inner .hero__left {
+    padding-top: 2rem;
+  }
 }
 #person-page .hero-content .hero__inner .hero__left .page-title {
   font-family: "Work Sans";
@@ -1126,11 +1165,28 @@
 #person-page .person-content .person-about {
   display: flex;
 }
+@media screen and (max-width: 599px) {
+  #person-page .person-content .person-about {
+    display: flex;
+    flex-direction: column;
+  }
+  #person-page .person-content .person-about .about__left, #person-page .person-content .person-about .about__right {
+    width: 100% !important;
+  }
+  #person-page .person-content .person-about .person-description, #person-page .person-content .person-about .details {
+    width: 100% !important;
+  }
+}
+@media screen and (min-width: 600px) {
+  #person-page .person-content .person-about .person-description {
+    margin-top: -4.5rem !important;
+  }
+}
 #person-page .person-content .person-about .about__left {
   width: 66.6666666667%;
 }
 #person-page .person-content .person-about .about__left .person-description {
-  margin-top: -5rem;
+  margin-top: 2rem;
   width: 75%;
 }
 #person-page .person-content .person-about .about__left .person-description .person-text {
@@ -1146,6 +1202,7 @@
 }
 #person-page .person-content .person-about .about__right .details {
   width: auto;
+  margin-bottom: 4rem;
   float: right;
   /*               padding-right: 1rem;*/
 }
@@ -1181,6 +1238,14 @@
   padding-right: 5rem;
   margin: auto 0;
 }
+@media screen and (max-width: 849px) {
+  #research-single-page .hero-content .hero__inner .hero__left {
+    padding-right: 0;
+  }
+  #research-single-page .hero-content .hero__inner .hero__left .page-title {
+    font-size: 1.2rem !important;
+  }
+}
 #research-single-page .hero-content .hero__inner .hero__left .page-title {
   font-family: "Work Sans";
   color: #8894AD;
@@ -1204,14 +1269,32 @@
 #research-single-page .hero-content .hero__inner .hero__right .image {
   max-width: 60%;
 }
+@media screen and (max-width: 849px) {
+  #research-single-page .hero-content .hero__inner .hero__right .image {
+    max-width: 80%;
+  }
+}
 #research-single-page .research-single-content .section-inner {
   padding: 4rem 0;
 }
 #research-single-page .research-single-content .research-single-about {
   display: flex;
 }
+@media screen and (max-width: 849px) {
+  #research-single-page .research-single-content .research-single-about {
+    display: flex;
+    flex-direction: column;
+  }
+  #research-single-page .research-single-content .research-single-about .about__left, #research-single-page .research-single-content .research-single-about .about__right {
+    width: 100% !important;
+  }
+  #research-single-page .research-single-content .research-single-about .research-description, #research-single-page .research-single-content .research-single-about .details {
+    width: 100% !important;
+  }
+}
 #research-single-page .research-single-content .research-single-about .about__left {
   width: 66.6666666667%;
+  margin-right: 3rem;
 }
 #research-single-page .research-single-content .research-single-about .about__left .research-text {
   margin-bottom: 2rem;
@@ -1221,6 +1304,7 @@
 }
 #research-single-page .research-single-content .research-single-about .about__right .details {
   width: 20rem;
+  margin-bottom: 4rem;
   float: right;
 }
 #research-single-page .research-single-content .research-single-about .about__right .details .detail__group {
@@ -1305,7 +1389,23 @@
 }
 
 #getinvolved-page .waves-hero {
-  padding: 5rem 0 2rem;
+  padding: 0rem 0 2rem;
+}
+#getinvolved-page .waves-hero .hero__right {
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 600px) {
+  #getinvolved-page .waves-hero {
+    padding: 5rem 0 2rem;
+  }
+  #getinvolved-page .waves-hero .hero__right {
+    margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 699px) {
+  #getinvolved-page .waves-hero .tagline {
+    font-size: 2.5rem;
+  }
 }
 #getinvolved-page .section-inner {
   padding: 4rem 0 5rem;
@@ -1570,7 +1670,15 @@ button {
   font-family: "Domine";
   font-weight: bold;
   color: #FFF;
-  font-size: 3.5rem;
+  font-size: 2rem;
+}
+@media screen and (min-width: 600px) {
+  .waves-hero .page-title-block .tagline {
+    font-family: "Domine";
+    font-weight: bold;
+    color: #FFF;
+    font-size: 3.5rem;
+  }
 }
 .waves-hero .page-title-block .underline--yellow {
   width: 100%;
@@ -1587,18 +1695,25 @@ button {
   height: 100%;
 }
 .waves-hero .hero__inner {
+  display: flex;
+  flex-wrap: wrap-reverse;
   height: 100%;
-  display: flex;
-  align-items: center;
 }
-.waves-hero .hero__inner .hero__left {
-  width: 66.6666666667%;
-  padding-right: 5rem;
-  padding-bottom: 4.5rem;
-}
-.waves-hero .hero__inner .hero__right {
-  display: flex;
-  width: 33.3333333333%;
+@media screen and (min-width: 600px) {
+  .waves-hero .hero__inner {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .waves-hero .hero__inner .hero__left {
+    width: 66.6666666667%;
+    padding-right: 5rem;
+    padding-bottom: 4.5rem;
+  }
+  .waves-hero .hero__inner .hero__right {
+    display: flex;
+    width: 33.3333333333%;
+  }
 }
 
 @media screen and (min-width: 568px) {

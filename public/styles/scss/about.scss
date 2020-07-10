@@ -4,7 +4,7 @@
         height: calc(100vh - 3.2rem);
     }
     .section-inner {
-        padding: 2rem 0 5rem;
+        padding: 2rem 0 4rem;
     }
     .about-events {
         background: $white;
@@ -20,18 +20,27 @@
             .event {
                 @include event($clay-blue);
                 display: flex;
+                flex-direction: column;
                 border-bottom: 0.5px solid $light-gray;
                 padding: 2rem 0;
                 margin: auto 0;
-                &:first-of-type {
+            /*    &:first-of-type {
                     border-top: 0.5px solid $light-gray;
+                }*/
+                @include from($mobile-lg) {
+                    flex-direction: row;
                 }
                 .image {
-                    margin-right: 2rem;
-                    max-width: 15%;
+                    margin-bottom: 2rem;
+                    @include from($mobile-lg) {
+                        margin-right: 2rem;
+                        max-width: 20%;
+                    }
                 }
                 .event__details {
-                    width: 70%;
+                   @include from($mobile-lg) {
+                     width: 70%;
+                   }
                     .event__date {
                         margin-bottom: 0.5rem;
                     } 
@@ -73,7 +82,7 @@
                 margin-bottom: 0.5rem;
             }
             .image {
-                max-width: 10rem;
+                min-width: 10rem;
             }
         }
     }

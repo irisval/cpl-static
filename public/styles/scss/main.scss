@@ -203,10 +203,16 @@ body {
   background-color: $light-blue;
   background-attachment: fixed;
 
+
+
   .page-title-block {
     display: inline-block;
+   
     .tagline {
-      @include callout-text($white, 3.5rem);
+      @include callout-text($white, 2rem);
+      @include from($mobile-lg) {
+        @include callout-text($white, 3.5rem);
+      }
     }
     .underline--yellow {
       width: 100%;
@@ -226,6 +232,10 @@ body {
     height: 100%;
   }
   .hero__inner {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    height: 100%;
+    @include from($mobile-lg) {
     height: 100%;
     display: flex;
     align-items: center;
@@ -238,6 +248,7 @@ body {
       display: flex;
       width: percentage(1/3);
     }
+  }
   }
 }
 
