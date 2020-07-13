@@ -247,7 +247,7 @@ $card-paper-min: 15rem;
 
 .card-home-news {
   @include card($main-gray);
-  box-shadow: 0 3px 14px #e5e5e5 !important;
+  box-shadow: 0 3px 10px #e5e5e5 !important;
   display: flex !important;
   width: 40vw !important;
   padding: $card-content-padding $card-content-padding $card-content-padding 0;
