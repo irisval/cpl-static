@@ -168,6 +168,7 @@
 .card-home-research--image .research-page-date {
   margin-top: 0.5rem;
   font-size: 0.75rem;
+  font-weight: 500;
 }
 .card-home-research--image .research-page-date {
   color: #364e81;
@@ -201,6 +202,7 @@
 .card-home-research--text .research-page-date {
   margin-top: 1rem;
   font-size: 0.75rem;
+  font-weight: 500;
 }
 .card-home-research--text .research-page-date {
   color: #364e81;
@@ -231,6 +233,7 @@
 .card-research--image .research-page-date {
   margin-top: 0.5rem;
   font-size: 0.75rem;
+  font-weight: 500;
 }
 .card-research--image .research-page-date {
   color: #364e81;
@@ -264,6 +267,7 @@
 .card-research--text .research-page-date {
   margin-top: 1rem;
   font-size: 0.75rem;
+  font-weight: 500;
 }
 .card-research--text .research-page-date {
   color: #364e81;
@@ -886,6 +890,10 @@
 }
 #home-page .home-upcoming .section-inner .section__right .event .event__description {
   margin-bottom: 3rem;
+}
+#home-page .home-upcoming .section-inner .section__right .event .event__location {
+  font-weight: 0.75rem;
+  font-weight: 500;
 }
 @media screen and (max-width: 849px) {
   #home-page .home-upcoming .section-inner {

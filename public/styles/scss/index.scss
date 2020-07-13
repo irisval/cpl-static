@@ -141,6 +141,10 @@
             .event__description {
               margin-bottom: 3rem;
             }
+            .event__location {
+              font-weight: 0.75rem;
+              font-weight: 500;
+            }
           }
         }
         @include until($tablet-md) {
