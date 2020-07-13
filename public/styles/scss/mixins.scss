@@ -1,8 +1,8 @@
 @mixin callout-text($color, $size) {
-    font-family: $family-secondary;
-    font-weight: bold;
-    color: $color;
-    font-size: $size;
+  font-family: $family-secondary;
+  font-weight: bold;
+  color: $color;
+  font-size: $size;
 }
 
 @mixin underline($color) {
@@ -11,66 +11,67 @@
 }
 
 @mixin event($title-color) {
-    .event__date {
-        font-family: $kollektif;
-        text-transform: uppercase;
-        font-weight: bold;
-        color: $mustard;
-    }
-    .event__title {
-        font-family: $family-secondary;
-        text-decoration: underline;
-        font-weight: bold;
-        color: $title-color;
-        font-size: 1.5rem;
-    }
-    .event__description, .event__location {
-        font-weight: 400;
-    }
+  .event__date {
+    font-family: $kollektif;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $mustard;
+  }
+  .event__title {
+    font-family: $family-secondary;
+    text-decoration: underline;
+    font-weight: bold;
+    color: $title-color;
+    font-size: 1.5rem;
+  }
+  .event__description,
+  .event__location {
+    font-weight: 400;
+  }
 }
 
 @mixin dropdown($width) {
-    .dropdown-trigger button {
-        background: none;
-        color: $main-gray;
-        font-weight: 400;
-        border-width: 0 0 1px 0;
-        border-style: solid;
-        border-color: $bg-gray $bg-gray $clay-blue $bg-gray;
-        width: $width;
-        justify-content: left;
-        display: inline-block;
-        padding-left: 0.1rem;
-        padding-right: 0.1rem;
-        span:first-of-type {
-            float: left;
-        }
-        span.icon {
-            float: right;
-        }
+  .dropdown-trigger button {
+    background: none;
+    color: $main-gray;
+    font-weight: 400;
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: $bg-gray $bg-gray $clay-blue $bg-gray;
+    width: $width;
+    justify-content: left;
+    display: inline-block;
+    padding-left: 0.1rem;
+    padding-right: 0.1rem;
+    span:first-of-type {
+      float: left;
     }
-    .dropdown-content {
-        width: $width;
+    span.icon {
+      float: right;
     }
+  }
+  .dropdown-content {
+    width: $width;
+  }
 }
 
 @mixin details($width) {
-    width: $width;
-    margin-bottom: $page-bottom;
-    .detail__group {
-        border-bottom: 0.5px solid $clay-blue;
-        padding-bottom: 1rem;
-        &:not(:first-of-type) {
-            padding-top: 0.6rem;
-        }
-        a {
-            text-decoration: underline;
-        }
-    }          
+  width: $width;
+  margin-bottom: $page-bottom;
+  .detail__group {
+    border-bottom: 0.5px solid $clay-blue;
+    padding-bottom: 1rem;
+    &:not(:first-of-type) {
+      padding-top: 0.6rem;
+    }
+    a {
+      text-decoration: underline;
+    }
+  }
 }
 
-
 /*https://github.com/jgthms/bulma/issues/1677*/
+$mobile-pure: 415px;
 $mobile-md: 568px !default;
 $mobile-lg: 600px;
 $tablet-md: 850px;
@@ -87,12 +88,8 @@ $tablet-md: 850px;
   }
 }
 
-
 @mixin tablet-md {
   @media screen and (min-width: $tablet-md), print {
     @content;
   }
 }
-
-
-

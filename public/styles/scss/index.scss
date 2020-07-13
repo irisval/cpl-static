@@ -1,206 +1,236 @@
-    #home-page {
-        .hero {
-            /*height: calc(100vh - $nav-height); using variable doesn't work*/
-            height: calc(100vh - 3.2rem);
-            background-color: $clay-blue;
-            .tagline {
-               @include callout-text($white, 2rem);
-               @include from($mobile-md) {
-                   @include callout-text($white, 3rem);
-               }
-               @include from($desktop) {
-                   @include callout-text($white, 3.5rem);
-               }
-           }
+#home-page {
+  .hero {
+    /*height: calc(100vh - $nav-height); using variable doesn't work*/
+    height: calc(100vh - 3.2rem);
+    background-color: $clay-blue;
 
-           .hero__inner {
-            display: flex;
-            flex-wrap: wrap-reverse;
-            height: 100%;
-            .hero__right {
-                width: 100%;
-                .image {
-                    width: 45%;
-                    margin: 1rem 0;
-                    float: right;
-                }
-            }
-            .hero__left {
-                align-self: flex-end;
-            }
-        }
-        .tagline-description {
-            color: $white;
-        }
-        .underline--yellow {
-            width: 7rem;
-            margin: 0rem 0 2rem;
-        }
-        .container {
-            height: 100%;
-        }
-        @include until($mobile-md) {
-            .hero__inner .hero__right .image {
-                width: 100%;
-                margin: 0;
-            }
-        
-        }
-        @include from($desktop) {
-            .hero__inner {
-                height: 100%;
-                display: flex;
-                .hero__left {
-                    width: percentage(2/3);
-                    margin-top: auto;
-                    padding-right: 5rem;
-                    padding-bottom: 4.5rem;
-                }
-                .hero__right {
-                    display: flex;
-                    margin: auto 0;
-                    width: percentage(1/3);
-                    .image {
-                        width: 100%;
-                    }
-                }
-            } 
-        }
+     background: url("../img/about/hero-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $light-blue;
+  background-attachment: fixed;
 
+
+  
+    .tagline {
+      @include callout-text($white, 2rem);
+      @include from($mobile-md) {
+        @include callout-text($white, 3rem);
+      }
+      @include from($desktop) {
+        @include callout-text($white, 3.5rem);
+      }
     }
 
-    .section-inner {
-        padding: 2rem 0 5rem;
+    .hero__inner {
+      display: flex;
+      flex-wrap: wrap-reverse;
+      height: 100%;
+      .hero__right {
+        width: 100%;
+        .image {
+          width: 45%;
+          margin: 1rem 0;
+          float: right;
+        }
+      }
+      .hero__left {
+        align-self: flex-end;
+      }
     }
+    .tagline-description {
+      color: $white;
+    }
+    .underline--yellow {
+      width: 7rem;
+      margin: 0rem 0 2rem;
+    }
+    .container {
+      height: 100%;
+    }
+    @include until($mobile-md) {
+      .hero__inner .hero__right .image {
+        width: 100%;
+        margin: 0;
+      }
+    }
+    @include from($desktop) {
+      .hero__inner {
+        height: 100%;
+        display: flex;
+        .hero__left {
+          width: percentage(2/3);
+          margin-top: auto;
+          padding-right: 5rem;
+          padding-bottom: 4.5rem;
+        }
+        .hero__right {
+          display: flex;
+          margin: auto 0;
+          width: percentage(1/3);
+          .image {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
 
-    @mixin info-layout {
+  .section-inner {
+    padding: 2rem 0 5rem;
+  }
+
+  @mixin info-layout {
+    display: flex;
+    flex-direction: row;
+    .section__left {
+      width: 35%;
+      .title-area {
         display: flex;
         flex-direction: row;
-        .section__left {
-            width: 35%;
-            .upcoming-title {
-                @include callout-text($clay-blue, 2rem);
-                @include from($desktop) {
-                   @include callout-text($clay-blue, 3rem);
-               }
-            }
-            .underline--clayblue {
-                width: 6rem;
-                margin: 0rem 0 2rem;
-            }
-            .button {
-                margin-top: 2rem;
-                i {
-                    margin-left: 3rem;
-                }
-            }
+       
+        @include from($desktop) {
+          flex-direction: column;
         }
-        .section__right {
-            width: 65%;
+        .upcoming-title {
+          @include callout-text($clay-blue, 2rem);
+           margin-right: 0.5rem;
+          @include from($desktop) {
+            @include callout-text($clay-blue, 3rem);
+            margin-right: 0;
+          }
         }
+      }
+
+      .underline--clayblue {
+        width: 6rem;
+        margin: 0rem 0 2rem;
+      }
+      .button {
+          // margin-top: 2rem;
+          display: block;
+          i {
+            margin-left: 3rem;
+          }
+        }
+        .text-more {
+          display: none;
+        }
+      }
+      .section__right {
+        width: 65%;
+      }
     }
 
     .home-upcoming {
-        background: $white;
-        .section-inner {
-            @include info-layout;
-            .section__right {
-                .event {
-                    @include event($main-gray);
-                    border-left: 1px solid $main-gray;
-                    padding: 0 2rem;
-                    .event__date {
-                        margin-bottom: 0.8rem;
-                    }
-                    .event__title {
-                        margin-bottom: 1.5rem;
-                    }
-                    .event__description {
-                        margin-bottom: 3rem;
-                    }
-                }
+      background: $white;
+      .section-inner {
+        @include info-layout;
+        .section__right {
+          .event {
+            @include event($main-gray);
+            border-left: 1px solid $main-gray;
+            padding: 0 2rem;
+            .event__date {
+              margin-bottom: 0.8rem;
             }
-            @include until($tablet-md) {
-                flex-direction: column !important;
-                .section__left, .section__right {
-                    width: 100%;
-                }
-                .section__left {
-                    display: flex;
-                    justify-content: space-between;
-                    flex-wrap: wrap;
-                    .underline--clayblue {
-                        width: 0;
-                    }
-                    margin-bottom: 2em;
-                }
+            .event__title {
+              margin-bottom: 1.5rem;
             }
+            .event__description {
+              margin-bottom: 3rem;
+            }
+          }
         }
+        @include until($tablet-md) {
+          flex-direction: column !important;
+          .section__left,
+          .section__right {
+            width: 100%;
+          }
+          .section__left {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .button {
+              display: none;
+            }
+            .text-more {
+              display: block;
+            }
+            .underline--clayblue {
+              width: 0;
+            }
+            margin-bottom: 2em;
+          }
+        }
+      }
     }
 
-
     .home-getinvolved {
-        background: $white;
-        .section-inner {
-            align-items: center;
-            @include info-layout;
-            .section__right {
-                padding: 0 3rem;
-                .text {
-                    vertical-align: middle;
-                    line-height: 1.8;
-                    a {
-                        text-decoration: underline;
-                    }
-                }
+      background: $white;
+      .section-inner {
+        align-items: center;
+        @include info-layout;
+        .section__right {
+          padding: 0 3rem;
+          .text {
+            vertical-align: middle;
+            line-height: 1.8;
+            a {
+              text-decoration: underline;
             }
-            @include until($mobile-lg) {
-                display: flex;
-                flex-direction: column;
-                .section__left, .section__right {
-                    width: 100%;
-                }
-                .section__left {
-                    display: flex;
-                    .underline--clayblue {
-                        width: 0;
-                    }
-                    margin-bottom: 2em;
-                }
-            }
+          }
         }
+        @include until($mobile-lg) {
+          display: flex;
+          flex-direction: column;
+
+          .section__left,
+          .section__right {
+            width: 100%;
+          }
+          .section__left {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .button {
+              display: none;
+            }
+            .text-more {
+              display: block;
+            }
+            .underline--clayblue {
+              width: 0;
+            }
+            margin-bottom: 2em;
+          }
+        }
+      }
     }
 
     .text-more {
-        float: right;
-        font-weight: bold;
-        color: $clay-blue;
-        text-decoration: none;
-        i {
-            margin-left: 0.5rem;
-        }
-
+      float: right;
+      font-weight: bold;
+      color: $clay-blue;
+      text-decoration: none;
+      i {
+        margin-left: 0.5rem;
+      }
     }
     .home-news {
-        .carousel-control {
-            display: flex;
-            align-items: center;/*Vertical align*/
-            justify-content: center;
-            margin-top: 2rem;
-            .clear-button {
-                margin: 0 2.5rem;
-            }
-            i {
-                color: $clay-blue;
-
-            }
+      .carousel-control {
+        display: flex;
+        align-items: center; /*Vertical align*/
+        justify-content: center;
+        margin-top: 2rem;
+        .clear-button {
+          margin: 0 2.5rem;
         }
+        i {
+          color: $clay-blue;
+        }
+      }
     }
-
-
-
-}
-
-
-
-
+  }

@@ -1,54 +1,52 @@
 #papers-page {
-    .papers-all {
-        .section-inner {
-            padding: 1rem 0;
-        }
-        .columns {
-            margin: 2.5rem 0;
-            &:last-of-type {
-                margin-bottom: $page-bottom;
-            }
-        }
-        .dropdown-year {
-            @include dropdown(12rem);
-            margin-right: 2em;
-        }
-
-        .dropdown-author {
-            @include dropdown(20rem);
-        }
-        .dropdown-area {
-            @include until ($mobile-lg) {
-                display: flex;
-                width: 80%;
-                margin: 0 auto;
-                justify-content: space-between;
-                .dropdown-year {
-                    margin-right: 0;
-                }
-
-
-                .dropdown {
-                    width: 100%;
-                    .dropdown-trigger {
-                        width: 90%;
-                    }
-                    .button {
-                        width: 100%;
-                    }
-                }
-            }
-        }
-        
-        
-        .buttons-col {
-            text-align: center;
-            .clear-button {
-                margin: 0 auto !important;
-            }
-            @include until ($mobile-lg) {
-                margin-top: 0;
-            }
-        }
+  .papers-all {
+    .section-inner {
+      padding: 1rem 0;
     }
+    .columns {
+      margin: 2.5rem 0;
+      &:last-of-type {
+        margin-bottom: $page-bottom;
+      }
+    }
+    .dropdown-year {
+      @include dropdown(12rem);
+      margin-right: 2em;
+    }
+
+    .dropdown-author {
+      @include dropdown(20rem);
+    }
+    .dropdown-area {
+      @include until($mobile-lg) {
+        display: flex;
+        width: 80%;
+        margin: 0 auto;
+        justify-content: space-between;
+        .dropdown-year {
+          margin-right: 0;
+        }
+
+        .dropdown {
+          width: 100%;
+          .dropdown-trigger {
+            width: 90%;
+          }
+          .button {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .buttons-col {
+      text-align: center;
+      .clear-button {
+        margin: 0 auto !important;
+      }
+      @include until($mobile-lg) {
+        margin-top: 0;
+      }
+    }
+  }
 }

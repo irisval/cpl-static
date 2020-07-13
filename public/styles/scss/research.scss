@@ -1,33 +1,33 @@
 #research-page {
-    .research-all {
-        .section-inner {
-            padding: 1rem 0;
-        }
-        .columns {
-            margin: 2.5rem 0;
-            &:last-of-type {
-                margin-bottom: $page-bottom;
-            }
-        }
-        .dropdown {
-            @include dropdown(15rem);
-            @include until($mobile-lg) {
-                justify-content: center;
-                width: 100%;
-                .dropdown-trigger {
-                    width: 80%;
-                    .button {
-                        width: 100%;
-                    }
-                }
-                .dropdown-menu {
-                    width: 100%;
-                    .dropdown-content {
-                        width: 80%;
-                        margin: 0 auto;
-                    }
-                }
-            }
-        }
+  .research-all {
+    .section-inner {
+      padding: 1rem 0;
     }
+    .columns {
+      margin: 2.5rem 0;
+      &:last-of-type {
+        margin-bottom: $page-bottom;
+      }
+    }
+    .dropdown {
+      @include dropdown(15rem);
+      @include until($mobile-lg) {
+        justify-content: center;
+        width: 100%;
+        .dropdown-trigger {
+          width: 80%;
+          .button {
+            width: 100%;
+          }
+        }
+        .dropdown-menu {
+          width: 100%;
+          .dropdown-content {
+            width: 80%;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+  }
 }

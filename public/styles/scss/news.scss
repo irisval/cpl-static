@@ -1,26 +1,26 @@
 #news-page {
-    .page-title-block {
-        margin-top: 3rem;
-        display: inline-block;
-        .page-title {
-            @include callout-text($clay-blue, 2.5rem);
-        }
-        .underline--yellow {
-            width: 100%;
-            margin: 0rem 0 2rem;
-        }
+  .page-title-block {
+    margin-top: 3rem;
+    display: inline-block;
+    .page-title {
+      @include callout-text($clay-blue, 2.5rem);
     }
-    .news-content {
-        .dropdown-year {
-            @include dropdown(20rem);
-            margin-right: 2em;
-        }
-        .news-list {
-            margin: 3rem 0 5rem;
-        }
-        .clear-button {
-            margin: 0 auto;
-            margin-bottom: 5rem;
-        }
+    .underline--yellow {
+      width: 100%;
+      margin: 0rem 0 2rem;
     }
+  }
+  .news-content {
+    .dropdown-year {
+      @include dropdown(20rem);
+      margin-right: 2em;
+    }
+    .news-list {
+      margin: 3rem 0 5rem;
+    }
+    .clear-button {
+      margin: 0 auto;
+      margin-bottom: 5rem;
+    }
+  }
 }

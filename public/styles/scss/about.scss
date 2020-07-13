@@ -1,89 +1,88 @@
 #about-page {
-    .waves-hero {
-        /*height: calc(100vh - $nav-height); using variable doesn't work*/
-        height: calc(100vh - 3.2rem);
+  .waves-hero {
+    /*height: calc(100vh - $nav-height); using variable doesn't work*/
+    height: calc(100vh - 3.2rem);
+  }
+  .section-inner {
+    padding: 2rem 0 4rem;
+  }
+  .about-events {
+    background: $white;
+    .past-link {
+      text-decoration: underline;
+      font-family: $kollektif;
+      font-weight: 0.8rem;
+      float: right;
+      color: $clay-gray;
     }
-    .section-inner {
-        padding: 2rem 0 4rem;
-    }
-    .about-events {
-        background: $white;
-        .past-link {
-            text-decoration: underline;
-            font-family: $kollektif;
-            font-weight: 0.8rem;
-            float: right;
-            color: $clay-gray;
-        }
-        .events-list {
-            margin: 3rem 0 1rem;
-            .event {
-                @include event($clay-blue);
-                display: flex;
-                flex-direction: column;
-                border-bottom: 0.5px solid $light-gray;
-                padding: 2rem 0;
-                margin: auto 0;
-            /*    &:first-of-type {
+    .events-list {
+      margin: 3rem 0 1rem;
+      .event {
+        @include event($clay-blue);
+        display: flex;
+        flex-direction: column;
+        border-bottom: 0.5px solid $light-gray;
+        padding: 2rem 0;
+        margin: auto 0;
+        /*    &:first-of-type {
                     border-top: 0.5px solid $light-gray;
                 }*/
-                @include from($mobile-lg) {
-                    flex-direction: row;
-                }
-                .image {
-                    margin-bottom: 2rem;
-                    @include from($mobile-lg) {
-                        margin-right: 2rem;
-                        max-width: 20%;
-                    }
-                }
-                .event__details {
-                   @include from($mobile-lg) {
-                     width: 70%;
-                   }
-                    .event__date {
-                        margin-bottom: 0.5rem;
-                    } 
-                    .event__title {
-                        margin-bottom: 1rem;
-                    }
-                    .event__location {
-                        margin-top: 1rem;
-                        font-size: 0.8rem;
-
-                    }
-                }
-            }
+        @include from($mobile-lg) {
+          flex-direction: row;
         }
+        .image {
+          margin-bottom: 2rem;
+          @include from($mobile-lg) {
+            margin-right: 2rem;
+            max-width: 20%;
+          }
+        }
+        .event__details {
+          @include from($mobile-lg) {
+            width: 70%;
+          }
+          .event__date {
+            margin-bottom: 0.5rem;
+          }
+          .event__title {
+            margin-bottom: 1rem;
+          }
+          .event__location {
+            margin-top: 1rem;
+            font-size: 0.8rem;
+          }
+        }
+      }
     }
-    .about-facilities {
-        .facilities-description {
-            margin-bottom: 2rem;
-        }
-        .facilities-about {
-            margin: 1rem 0 4rem;
-        }
-        .facility {
-            display: flex;
-            justify-content: space-between;   
-            border-bottom: 0.5px solid $light-gray;
-           /* padding: 1rem 4rem;*/
-            padding: 1rem 0;
-            margin: auto 0;
-            &:first-of-type {
-                border-top: 0.5px solid $light-gray;
-            }
-            .facility__details {
-                margin: auto 0;
-            }
-            .facility__name {
-                color: $clay-blue;
-                font-weight: bold;
-                margin-bottom: 0.5rem;
-            }
-            .image {
-                min-width: 10rem;
-            }
-        }
+  }
+  .about-facilities {
+    .facilities-description {
+      margin-bottom: 2rem;
     }
+    .facilities-about {
+      margin: 1rem 0 4rem;
+    }
+    .facility {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 0.5px solid $light-gray;
+      /* padding: 1rem 4rem;*/
+      padding: 1rem 0;
+      margin: auto 0;
+      &:first-of-type {
+        border-top: 0.5px solid $light-gray;
+      }
+      .facility__details {
+        margin: auto 0;
+      }
+      .facility__name {
+        color: $clay-blue;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+      }
+      .image {
+        min-width: 10rem;
+      }
+    }
+  }
 }

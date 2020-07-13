@@ -1,24 +1,23 @@
 #whoweare-page {
-    @include until($mobile-lg) {
-        .hero__right {
-           padding-left: 1rem;
-        }
+  @include until($mobile-lg) {
+    .hero__right {
+      padding-left: 1rem;
     }
-    .whoweare-all {
-        .section-inner {
-            padding: 1rem 0;
-        }
-        .tabs {
-            width: 90%;
-            margin: 0 auto;
-            font-size: 0.85rem;
-        }
-        .columns {
-            margin: 2.5rem 0;
-            &:last-of-type {
-                margin-bottom: $page-bottom;
-            }
-        }
-       
+  }
+  .whoweare-all {
+    .section-inner {
+      padding: 1rem 0;
     }
+    .tabs {
+      width: 90%;
+      margin: 0 auto;
+      font-size: 0.85rem;
+    }
+    .columns {
+      margin: 2.5rem 0;
+      &:last-of-type {
+        margin-bottom: $page-bottom;
+      }
+    }
+  }
 }
