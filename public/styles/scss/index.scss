@@ -98,6 +98,7 @@
            margin-right: 0.5rem;
           @include from($desktop) {
             @include callout-text($clay-blue, 3rem);
+            font-family: $family-primary !important;
             margin-right: 0;
           }
         }
@@ -137,6 +138,9 @@
             }
             .event__title {
               margin-bottom: 1.5rem;
+              font-family: $family-primary !important;
+              font-weight: 500 !important;
+              text-decoration: none;
             }
             .event__description {
               margin-bottom: 3rem;

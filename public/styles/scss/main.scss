@@ -174,7 +174,9 @@ body {
 }
 
 .section-title {
-  font-family: $kollektif;
+  font-family: $family-primary;
+  font-weight: 500;
+  // font-family: $kollektif;
   font-size: $section-title-size;
   text-decoration: underline;
   text-decoration-color: $mustard;

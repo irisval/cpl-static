@@ -846,6 +846,7 @@
     font-weight: bold;
     color: #8894ad;
     font-size: 3rem;
+    font-family: "Work Sans" !important;
     margin-right: 0;
   }
 }
@@ -891,6 +892,9 @@
 }
 #home-page .home-upcoming .section-inner .section__right .event .event__title {
   margin-bottom: 1.5rem;
+  font-family: "Work Sans" !important;
+  font-weight: 500 !important;
+  text-decoration: none;
 }
 #home-page .home-upcoming .section-inner .section__right .event .event__description {
   margin-bottom: 3rem;
@@ -956,6 +960,7 @@
     font-weight: bold;
     color: #8894ad;
     font-size: 3rem;
+    font-family: "Work Sans" !important;
     margin-right: 0;
   }
 }
@@ -1824,7 +1829,8 @@ body {
 }
 
 .section-title {
-  font-family: "Kollektif";
+  font-family: "Work Sans";
+  font-weight: 500;
   font-size: 1.5rem;
   text-decoration: underline;
   text-decoration-color: #feb617;
