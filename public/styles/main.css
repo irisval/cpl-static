@@ -1329,6 +1329,7 @@
   font-size: 1.6rem;
   line-height: 0.9;
   margin-bottom: 0.8rem;
+  font-weight: 500;
 }
 #person-page .hero-content .hero__inner .hero__left .underline--yellow {
   width: 4rem;
@@ -1441,6 +1442,7 @@
   font-family: "Work Sans";
   color: #8894ad;
   font-size: 1.6rem;
+  font-weight: 500;
   margin-bottom: 0.75rem;
 }
 #research-single-page .hero-content .hero__inner .hero__left .underline--yellow {
