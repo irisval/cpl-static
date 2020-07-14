@@ -98,7 +98,7 @@
            margin-right: 0.5rem;
           @include from($desktop) {
             @include callout-text($clay-blue, 3rem);
-            font-family: $family-primary !important;
+            // font-family: $family-primary !important;
             margin-right: 0;
           }
         }
